@@ -2,11 +2,11 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"log"
 	"maps"
 	"os"
+	"strings"
 
 	"github.com/blang/semver/v4"
 	"github.com/operator-framework/operator-registry/alpha/declcfg"
@@ -57,6 +57,19 @@ func run(fromVersions []string, toVersion string) error {
 	return nil
 }
 
+type ProblemPackage struct {
+	OCPVersion   string       `json:"ocpVersion"`
+	PackageName  string       `json:"packageName"`
+	DisplayNames []string     `json:"displayNames"`
+	CSVs         []ProblemCSV `json:"csvs"`
+}
+
+type ProblemCSV struct {
+	Name                          string         `json:"name"`
+	Version                       semver.Version `json:"version"`
+	OriginalCatalogUpdateChannels []string       `json:"originalCatalogUpdateChannels"`
+}
+
 func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 	for _, fromPkg := range from {
 		toPkg, ok := to[fromPkg.Name]
@@ -83,6 +96,16 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 		for k := range fromBundles {
 			delete(onlyInTo, k)
 		}
+
+		fromEntries := map[string][]declcfg.ChannelEntry{}
+		for _, ch := range fromPkg.Channels {
+			for _, b := range ch.Bundles {
+				fromEntries[b.Name] = append(fromEntries[b.Name], declcfg.ChannelEntry{
+					Replaces: b.Replaces, Skips: b.Skips, SkipRange: b.SkipRange,
+				})
+			}
+		}
+
 		toEntries := map[string][]declcfg.ChannelEntry{}
 		for _, ch := range toPkg.Channels {
 			for _, b := range ch.Bundles {
@@ -91,8 +114,8 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 				})
 			}
 		}
-		hasEdgeFrom := func(bName string, sources map[string]semver.Version) bool {
-			for _, e := range toEntries[bName] {
+		hasEdgeFrom := func(toName string, fromVersions map[string]semver.Version, entries map[string][]declcfg.ChannelEntry) bool {
+			for _, e := range toEntries[toName] {
 				skips := sets.New[string](e.Skips...)
 				sr := func(semver.Version) bool { return false }
 				if e.SkipRange != "" {
@@ -102,7 +125,7 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 						fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q is not a valid semver range: %v\n", e.SkipRange, err)
 					}
 				}
-				for name, ver := range sources {
+				for name, ver := range fromVersions {
 					if e.Replaces == name || skips.Has(name) || sr(ver) {
 						return true
 					}
@@ -114,7 +137,7 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 		// First we'll build the set of bundles that are in the "onlyInTo" map that also have an upgrade edge from any bundle in "fromBundles"
 		reachable := map[string]semver.Version{}
 		for bName, bVer := range onlyInTo {
-			if hasEdgeFrom(bName, fromBundles) {
+			if hasEdgeFrom(bName, fromBundles, toEntries) {
 				reachable[bName] = bVer
 			}
 		}
@@ -127,7 +150,7 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 				if _, ok := reachable[bName]; ok {
 					continue
 				}
-				if hasEdgeFrom(bName, reachable) {
+				if hasEdgeFrom(bName, reachable, toEntries) {
 					reachable[bName] = bVer
 					changed = true
 				}
@@ -140,46 +163,42 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 		if len(reachable) == 0 {
 			continue
 		}
-		csvNames := sets.KeySet(reachable)
-		data, err := json.Marshal(struct {
-			OCPVersion   string   `json:"ocpVersion"`
-			PackageName  string   `json:"packageName"`
-			DisplayNames []string `json:"displayNames"`
-			CSVNames     []string `json:"csvNames"`
-		}{
+		problemCSVs := []ProblemCSV{}
+		for name, ver := range reachable {
+			problemCSVs = append(problemCSVs, ProblemCSV{Name: name, Version: ver})
+		}
+		problemPackage := ProblemPackage{
 			OCPVersion:   fromVersion,
 			PackageName:  toPkg.Name,
 			DisplayNames: sets.List(displayNames),
-			CSVNames:     sets.List(csvNames),
-		})
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "WARNING: failed to marshal JSON output row: %v\n", err)
+			CSVs:         problemCSVs,
 		}
-		fmt.Println(string(data))
 
-		//for _, fromCh := range fromPkg.Channels {
-		//	for _, toCh := range toPkg.Channels {
-		//		for _, toBundle := range toCh.Bundles {
-		//			if !onlyInTo.Has(toBundle.Name) {
-		//				continue
-		//			}
-		//			sr := func(semver.Version) bool { return false }
-		//			if toBundle.SkipRange != "" {
-		//				sr, err = semver.ParseRange(toBundle.SkipRange)
-		//				if err != nil {
-		//					sr = func(semver.Version) bool { return false }
-		//					log.Printf("WARNING: invalid skip range %q for pkg:%q, ch:%q, entry:%q", toBundle.SkipRange, toPkg.Name, toCh.Name, toBundle.Name)
-		//				}
-		//			}
-		//
-		//			for _, fromBundle := range fromCh.Bundles {
-		//				if toBundle.Replaces == fromBundle.Name || sets.New[string](toBundle.Skips...).Has(fromBundle.Name) || sr(fromBundle.Version) {
-		//					fmt.Println(fromVersion, fromPkg.Name, fromCh.Name, toCh.Name, fromCh.Name == toCh.Name, fromBundle.Name, toBundle.Name)
-		//					continue
-		//				}
-		//			}
-		//		}
-		//	}
-		//}
+		// For each problem CSV, go back to the fromPkg and find all channel names that contain entries that can update from that problem CSV.
+
+		for i, pc := range problemPackage.CSVs {
+			channelNames := sets.New[string]()
+			for _, fromCh := range fromPkg.Channels {
+				for _, fromBundle := range fromCh.Bundles {
+					skips := sets.New[string](fromBundle.Skips...)
+					sr := func(semver.Version) bool { return false }
+					if fromBundle.SkipRange != "" {
+						if parsed, err := semver.ParseRange(fromBundle.SkipRange); err == nil {
+							sr = parsed
+						} else {
+							fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q is not a valid semver range: %v\n", fromBundle.SkipRange, err)
+						}
+					}
+					if fromBundle.Replaces == pc.Name || skips.Has(pc.Name) || sr(pc.Version) {
+						channelNames.Insert(fromCh.Name)
+					}
+				}
+			}
+			problemPackage.CSVs[i].OriginalCatalogUpdateChannels = sets.List(channelNames)
+		}
+
+		for _, csv := range problemPackage.CSVs {
+			fmt.Println(problemPackage.OCPVersion, problemPackage.PackageName, csv.Name, strings.Join(csv.OriginalCatalogUpdateChannels, ","), len(csv.OriginalCatalogUpdateChannels) > 0)
+		}
 	}
 }
