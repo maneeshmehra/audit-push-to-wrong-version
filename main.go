@@ -21,17 +21,23 @@ type Graph struct {
 }
 
 func main() {
+	catalogsDir := pflag.String("catalogs-dir", "catalogs-original", "path to the catalogs directory (used for incident comparison in steps 1-2)")
+	recentCatalogsDir := pflag.String("recent-catalogs-dir", "catalogs-latest", "path to recent catalogs directory (used for step 3 update edge check); defaults to --catalogs-dir if not set")
 	fromVersions := pflag.StringSlice("from", []string{"4.12", "4.13", "4.14", "4.15", "4.16", "4.17"}, "list of OCP versions to evaluate")
 	toVersion := pflag.String("to", "4.18", "target catalog providing update edges")
 	pflag.Parse()
 
-	if err := run(*fromVersions, *toVersion); err != nil {
+	if *recentCatalogsDir == "" {
+		*recentCatalogsDir = *catalogsDir
+	}
+
+	if err := run(*catalogsDir, *recentCatalogsDir, *fromVersions, *toVersion); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func run(fromVersions []string, toVersion string) error {
-	toDir := fmt.Sprintf("catalogs/%s", toVersion)
+func run(catalogsDir, recentCatalogsDir string, fromVersions []string, toVersion string) error {
+	toDir := fmt.Sprintf("%s/%s", catalogsDir, toVersion)
 	toFBC, err := declcfg.LoadFS(context.Background(), os.DirFS(toDir))
 	if err != nil {
 		return fmt.Errorf("loading catalog %q: %w", toDir, err)
@@ -42,7 +48,7 @@ func run(fromVersions []string, toVersion string) error {
 	}
 
 	for _, fromVersion := range fromVersions {
-		fromDir := fmt.Sprintf("catalogs/%s", fromVersion)
+		fromDir := fmt.Sprintf("%s/%s", catalogsDir, fromVersion)
 		fromFBC, err := declcfg.LoadFS(context.Background(), os.DirFS(fromDir))
 		if err != nil {
 			return fmt.Errorf("loading catalog %q: %w", fromDir, err)
@@ -51,7 +57,18 @@ func run(fromVersions []string, toVersion string) error {
 		if err != nil {
 			return fmt.Errorf("converting catalog %q to model: %w", fromDir, err)
 		}
-		compareVersions(fromVersion, toVersion, fromModel, toModel)
+
+		recentFromDir := fmt.Sprintf("%s/%s", recentCatalogsDir, fromVersion)
+		recentFromFBC, err := declcfg.LoadFS(context.Background(), os.DirFS(recentFromDir))
+		if err != nil {
+			return fmt.Errorf("loading recent catalog %q: %w", recentFromDir, err)
+		}
+		recentFromModel, err := declcfg.ConvertToModel(*recentFromFBC)
+		if err != nil {
+			return fmt.Errorf("converting recent catalog %q to model: %w", recentFromDir, err)
+		}
+
+		compareVersions(fromVersion, toVersion, fromModel, recentFromModel, toModel)
 	}
 
 	return nil
@@ -70,7 +87,7 @@ type ProblemCSV struct {
 	OriginalCatalogUpdateChannels []string       `json:"originalCatalogUpdateChannels"`
 }
 
-func compareVersions(fromVersion, toVersion string, from, to model.Model) {
+func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.Model) {
 	for _, fromPkg := range from {
 		toPkg, ok := to[fromPkg.Name]
 		if !ok {
@@ -174,27 +191,28 @@ func compareVersions(fromVersion, toVersion string, from, to model.Model) {
 			CSVs:         problemCSVs,
 		}
 
-		// For each problem CSV, go back to the fromPkg and find all channel names that contain entries that can update from that problem CSV.
-
-		for i, pc := range problemPackage.CSVs {
-			channelNames := sets.New[string]()
-			for _, fromCh := range fromPkg.Channels {
-				for _, fromBundle := range fromCh.Bundles {
-					skips := sets.New[string](fromBundle.Skips...)
-					sr := func(semver.Version) bool { return false }
-					if fromBundle.SkipRange != "" {
-						if parsed, err := semver.ParseRange(fromBundle.SkipRange); err == nil {
-							sr = parsed
-						} else {
-							fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q is not a valid semver range: %v\n", fromBundle.SkipRange, err)
+		// For each problem CSV, go back to the recent from-catalog and find all channel names that contain entries that can update from that problem CSV.
+		if recentFromPkg, ok := recentFrom[fromPkg.Name]; ok {
+			for i, pc := range problemPackage.CSVs {
+				channelNames := sets.New[string]()
+				for _, fromCh := range recentFromPkg.Channels {
+					for _, fromBundle := range fromCh.Bundles {
+						skips := sets.New[string](fromBundle.Skips...)
+						sr := func(semver.Version) bool { return false }
+						if fromBundle.SkipRange != "" {
+							if parsed, err := semver.ParseRange(fromBundle.SkipRange); err == nil {
+								sr = parsed
+							} else {
+								fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q is not a valid semver range: %v\n", fromBundle.SkipRange, err)
+							}
+						}
+						if fromBundle.Replaces == pc.Name || skips.Has(pc.Name) || sr(pc.Version) {
+							channelNames.Insert(fromCh.Name)
 						}
 					}
-					if fromBundle.Replaces == pc.Name || skips.Has(pc.Name) || sr(pc.Version) {
-						channelNames.Insert(fromCh.Name)
-					}
 				}
+				problemPackage.CSVs[i].OriginalCatalogUpdateChannels = sets.List(channelNames)
 			}
-			problemPackage.CSVs[i].OriginalCatalogUpdateChannels = sets.List(channelNames)
 		}
 
 		for _, csv := range problemPackage.CSVs {
