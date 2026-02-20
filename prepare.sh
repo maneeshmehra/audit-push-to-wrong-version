@@ -19,7 +19,8 @@ for tool in curl opm skopeo sha256sum; do
 done
 
 IMAGES=(registry.redhat.io/redhat/redhat-operator-index)
-INCIDENT_VERSIONS=(v4.18-1770172562 v4.17-1770172614 v4.16-1770168058 v4.15-1770167994 v4.14-1770255575 v4.13-1770313132 v4.12-1770182999)
+INCIDENT_IMAGE_4_18="registry-proxy.engineering.redhat.com/rh-osbs/iib@sha256:210fa4ca556f36688bcab0bf949b698618f44380dc8f1e8a214ee62474664b7d"  # Requires RH VPN access
+INCIDENT_VERSIONS=(v4.17-1770172614 v4.16-1770168058 v4.15-1770167994 v4.14-1770255575 v4.13-1770313132 v4.12-1770182999)
 LATEST_VERSIONS=(v4.17 v4.16 v4.15 v4.14 v4.13 v4.12)
 
 get_image_digest() {
@@ -101,6 +102,8 @@ if [[ -d catalogs/latest ]]; then
     echo "Moving existing catalogs/latest directory to $backup_dir"
     mv catalogs/latest "$backup_dir"
 fi
+
+pull_catalog "$INCIDENT_IMAGE_4_18" "catalogs/incident/4.18"
 
 for image in "${IMAGES[@]}"; do
     for version in "${INCIDENT_VERSIONS[@]}"; do
