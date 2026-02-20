@@ -19,7 +19,8 @@ for tool in curl opm skopeo sha256sum; do
 done
 
 IMAGES=(registry.redhat.io/redhat/redhat-operator-index)
-VERSIONS=(v4.17 v4.16 v4.15 v4.14 v4.13 v4.12)
+INCIDENT_VERSIONS=(v4.18-1770172562 v4.17-1770172614 v4.16-1770168058 v4.15-1770167994 v4.14-1770255575 v4.13-1770313132 v4.12-1770182999)
+LATEST_VERSIONS=(v4.17 v4.16 v4.15 v4.14 v4.13 v4.12)
 
 get_image_digest() {
     local image_ref=$1
@@ -55,7 +56,7 @@ create_digest() {
 
 create_indexignore() {
     local catalog_dir="$1"
-    
+
     cat > "$catalog_dir/.indexignore" << EOF
 # This file is used by the File-Based Catalog (FBC) format
 # to allow non-FBC files to be included in an FBC directory
@@ -63,50 +64,52 @@ create_indexignore() {
 EOF
 }
 
-# If catalogs-latest directory already exists, move it to catalogs-{yyyy}-{mm}-{dd} based on its modtime
-if [[ -d catalogs-latest ]]; then
-    mod_date=$(date -r catalogs-latest +%Y-%m-%d)
-    backup_dir="catalogs-${mod_date}"
+pull_catalog() {
+    local image_ref="$1"
+    local output_dir="$2"
+
+    echo "Ensuring $image_ref exists in $output_dir"
+
+    local current_digest
+    current_digest=$(get_image_digest "$image_ref")
+
+    mkdir -p "$output_dir"
+    create_indexignore "$output_dir"
+
+    if is_catalog_current "$output_dir" "$current_digest"; then
+        echo "$image_ref is up to date (digest: $current_digest)"
+        return 0
+    fi
+
+    if ! opm render "$image_ref" > "$output_dir/catalog.json"; then
+        echo "Failed to download $image_ref"
+        exit 1
+    fi
+
+    create_digest "$output_dir" "$current_digest" "$image_ref"
+    echo "Successfully cached $image_ref (digest: $current_digest)"
+}
+
+# If catalogs/latest directory already exists, move it to catalogs/{yyyymmdd_hhmm} based on its modtime
+if [[ -d catalogs/latest ]]; then
+    mod_date=$(date -r catalogs/latest +%Y%m%d_%H%M)
+    backup_dir="catalogs/${mod_date}"
     if [[ -e "$backup_dir" ]]; then
         echo "Error: backup directory $backup_dir already exists"
         exit 1
     fi
-    echo "Moving existing catalogs-latest directory to $backup_dir"
-    mv catalogs-latest "$backup_dir"
+    echo "Moving existing catalogs/latest directory to $backup_dir"
+    mv catalogs/latest "$backup_dir"
 fi
 
-for version in ${VERSIONS[@]}; do
-    for image in ${IMAGES[@]}; do
-        # Extract catalog name from image (e.g., "redhat-operator-index" from "registry.redhat.io/redhat/redhat-operator-index")
-        catalog_name=$(echo $image | sed 's/.*\///g')
-        
-        # Extract OCP version (remove 'v' prefix)
-        ocp_version=$(echo $version | sed 's/^v//')
-        
-        # Create directory structure: ./catalogs-latest/<catalogName>/<ocpVersion>
-        dir_name=catalogs-latest/$ocp_version
-        image_ref=$image:$version
-
-        echo "Ensuring latest $image_ref exists in $dir_name"
-
-        current_digest=$(get_image_digest $image_ref)
-
-        # Create the directory if it doesn't exist
-        mkdir -p $dir_name
-        create_indexignore $dir_name
-
-        if is_catalog_current $dir_name $current_digest; then
-            echo "$image_ref is up to date (digest: $current_digest)"
-            continue
-        fi
-
-        if ! opm render $image_ref > $dir_name/catalog.json; then
-            echo "Failed to download $image_ref"
-            exit 1
-        fi
-
-        create_digest $dir_name $current_digest $image_ref
-        echo "Successfully cached $image_ref (digest: $current_digest)"
+for image in "${IMAGES[@]}"; do
+    for version in "${INCIDENT_VERSIONS[@]}"; do
+        ocp_version=$(echo "$version" | sed 's/^v//;s/-.*//')
+        pull_catalog "$image:$version" "catalogs/incident/$ocp_version"
+    done
+    for version in "${LATEST_VERSIONS[@]}"; do
+        ocp_version=$(echo "$version" | sed 's/^v//')
+        pull_catalog "$image:$version" "catalogs/latest/$ocp_version"
     done
 done
 

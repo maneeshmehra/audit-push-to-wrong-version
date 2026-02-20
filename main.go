@@ -21,8 +21,8 @@ type Graph struct {
 }
 
 func main() {
-	catalogsDir := pflag.String("catalogs-dir", "catalogs-original", "path to the catalogs directory (used for incident comparison in steps 1-2)")
-	recentCatalogsDir := pflag.String("recent-catalogs-dir", "catalogs-latest", "path to recent catalogs directory (used for step 3 update edge check); defaults to --catalogs-dir if not set")
+	catalogsDir := pflag.String("catalogs-dir", "catalogs/incident", "path to the catalogs directory (used for incident comparison in steps 1-2)")
+	recentCatalogsDir := pflag.String("recent-catalogs-dir", "catalogs/latest", "path to recent catalogs directory (used for step 3 update edge check); defaults to --catalogs-dir if not set")
 	fromVersions := pflag.StringSlice("from", []string{"4.12", "4.13", "4.14", "4.15", "4.16", "4.17"}, "list of OCP versions to evaluate")
 	toVersion := pflag.String("to", "4.18", "target catalog providing update edges")
 	pflag.Parse()
@@ -139,7 +139,7 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 					if parsed, err := semver.ParseRange(e.SkipRange); err == nil {
 						sr = parsed
 					} else {
-						fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q is not a valid semver range: %v\n", e.SkipRange, err)
+						fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q for bundle %q is not a valid semver range: %v\n", e.SkipRange, e.Name, err)
 					}
 				}
 				for name, ver := range fromVersions {
