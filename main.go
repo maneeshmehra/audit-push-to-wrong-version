@@ -84,6 +84,7 @@ type ProblemPackage struct {
 type ProblemCSV struct {
 	Name                          string         `json:"name"`
 	Version                       semver.Version `json:"version"`
+	IncidentCatalogMemberChannels []string       `json:"incidentCatalogMemberChannels"`
 	OriginalCatalogUpdateChannels []string       `json:"originalCatalogUpdateChannels"`
 }
 
@@ -118,20 +119,28 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 		for _, ch := range fromPkg.Channels {
 			for _, b := range ch.Bundles {
 				fromEntries[b.Name] = append(fromEntries[b.Name], declcfg.ChannelEntry{
-					Replaces: b.Replaces, Skips: b.Skips, SkipRange: b.SkipRange,
+					Name: b.Name, Replaces: b.Replaces, Skips: b.Skips, SkipRange: b.SkipRange,
 				})
 			}
 		}
 
-		toEntries := map[string][]declcfg.ChannelEntry{}
+		type channelEntry struct {
+			ChannelName string
+			declcfg.ChannelEntry
+		}
+
+		toEntries := map[string][]channelEntry{}
 		for _, ch := range toPkg.Channels {
 			for _, b := range ch.Bundles {
-				toEntries[b.Name] = append(toEntries[b.Name], declcfg.ChannelEntry{
-					Replaces: b.Replaces, Skips: b.Skips, SkipRange: b.SkipRange,
+				toEntries[b.Name] = append(toEntries[b.Name], channelEntry{
+					ChannelName: ch.Name,
+					ChannelEntry: declcfg.ChannelEntry{
+						Name: b.Name, Replaces: b.Replaces, Skips: b.Skips, SkipRange: b.SkipRange,
+					},
 				})
 			}
 		}
-		hasEdgeFrom := func(toName string, fromVersions map[string]semver.Version, entries map[string][]declcfg.ChannelEntry) bool {
+		hasEdgeFrom := func(toName string, fromVersions map[string]semver.Version, entries map[string][]channelEntry) bool {
 			for _, e := range toEntries[toName] {
 				skips := sets.New[string](e.Skips...)
 				sr := func(semver.Version) bool { return false }
@@ -182,7 +191,11 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 		}
 		problemCSVs := []ProblemCSV{}
 		for name, ver := range reachable {
-			problemCSVs = append(problemCSVs, ProblemCSV{Name: name, Version: ver})
+			incidentChannels := sets.New[string]()
+			for _, ce := range toEntries[name] {
+				incidentChannels.Insert(ce.ChannelName)
+			}
+			problemCSVs = append(problemCSVs, ProblemCSV{Name: name, Version: ver, IncidentCatalogMemberChannels: sets.List(incidentChannels)})
 		}
 		problemPackage := ProblemPackage{
 			OCPVersion:   fromVersion,
@@ -216,7 +229,7 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 		}
 
 		for _, csv := range problemPackage.CSVs {
-			fmt.Println(problemPackage.OCPVersion, problemPackage.PackageName, csv.Name, strings.Join(csv.OriginalCatalogUpdateChannels, ","), len(csv.OriginalCatalogUpdateChannels) > 0)
+			fmt.Printf("%s %s %s %q %q %v\n", problemPackage.PackageName, problemPackage.OCPVersion, csv.Name, strings.Join(csv.IncidentCatalogMemberChannels, ","), strings.Join(csv.OriginalCatalogUpdateChannels, ","), len(csv.OriginalCatalogUpdateChannels) > 0)
 		}
 	}
 }
