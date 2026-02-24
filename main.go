@@ -204,7 +204,7 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 			CSVs:         problemCSVs,
 		}
 
-		// For each problem CSV, go back to the recent from-catalog and find all channel names that contain entries that can update from that problem CSV.
+		// For each problem CSV, go back to the recent from-catalog and find all channel names that contain entries that can update from or include that problem CSV.
 		if recentFromPkg, ok := recentFrom[fromPkg.Name]; ok {
 			for i, pc := range problemPackage.CSVs {
 				channelNames := sets.New[string]()
@@ -219,7 +219,7 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 								fmt.Fprintf(os.Stderr, "WARNING: SkipRange %q is not a valid semver range: %v\n", fromBundle.SkipRange, err)
 							}
 						}
-						if fromBundle.Replaces == pc.Name || skips.Has(pc.Name) || sr(pc.Version) {
+						if fromBundle.Name == pc.Name || fromBundle.Replaces == pc.Name || skips.Has(pc.Name) || sr(pc.Version) {
 							channelNames.Insert(fromCh.Name)
 						}
 					}
@@ -229,6 +229,9 @@ func compareVersions(fromVersion, toVersion string, from, recentFrom, to model.M
 		}
 
 		for _, csv := range problemPackage.CSVs {
+			if sets.New(csv.OriginalCatalogUpdateChannels...).IsSuperset(sets.New(csv.IncidentCatalogMemberChannels...)) {
+				continue
+			}
 			fmt.Printf("%s %s %s %q %q %v\n", problemPackage.PackageName, problemPackage.OCPVersion, csv.Name, strings.Join(csv.IncidentCatalogMemberChannels, ","), strings.Join(csv.OriginalCatalogUpdateChannels, ","), len(csv.OriginalCatalogUpdateChannels) > 0)
 		}
 	}
