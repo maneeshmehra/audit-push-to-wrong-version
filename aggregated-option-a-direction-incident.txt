@@ -1,0 +1,351 @@
+3scale-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.13 (in threescale-2.16)
+
+advanced-cluster-management
+  - 4.12, 4.13: publish patches for operator minor versions 2.12 (in release-2.12), 2.13 (in release-2.13), 2.14 (in release-2.14), 2.15 (in release-2.15)
+  - 4.14: publish patches for operator minor versions 2.13 (in release-2.13), 2.14 (in release-2.14), 2.15 (in release-2.15)
+  - 4.15: publish patches for operator minor versions 2.14 (in release-2.14), 2.15 (in release-2.15)
+  - 4.16: publish patches for operator minor versions 2.15 (in release-2.15)
+
+ansible-automation-platform-operator
+  - 4.12, 4.13: publish patches for operator minor versions 2.6 (in stable-2.6, stable-2.6-cluster-scoped)
+
+apicast-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.13 (in threescale-2.16)
+
+authorino-operator
+  - 4.12, 4.13: publish patches for operator minor versions 1.1 (in stable, tech-preview-v1), 1.2 (in stable)
+  - 4.14, 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+aws-efs-csi-driver-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+aws-load-balancer-operator
+  - 4.12: publish patches for operator minor versions 1.0 (in stable-v1.0), 1.1 (in stable-v1, stable-v1.1, stable-v1.2), 1.2 (in stable-v1, stable-v1.2)
+  - 4.13: publish patches for operator minor versions 1.1 (in stable-v1, stable-v1.1, stable-v1.2), 1.2 (in stable-v1, stable-v1.2)
+  - 4.14, 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable-v1, stable-v1.2)
+
+cephcsi-operator
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+cluster-kube-descheduler-operator
+  - 4.12: publish patches for operator minor versions 4.13 (in 4.13), 4.14, 5.0, 5.1 (in stable)
+  - 4.13: publish patches for operator minor versions 4.14, 5.0, 5.1 (in stable)
+  - 4.14: publish patches for operator minor versions 5.0, 5.1 (in stable)
+  - 4.15, 4.16: publish patches for operator minor versions 5.1 (in stable)
+
+cluster-logging
+  - 4.13, 4.14: publish patches for operator minor versions 6.1 (in stable-6.1), 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.15: publish patches for operator minor versions 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.16: publish patches for operator minor versions 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.17: publish patches for operator minor versions 6.4 (in stable-6.4)
+
+cluster-observability-operator
+  - 4.16: publish patches for operator minor versions 1.3 (in stable)
+
+clusterresourceoverride
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+container-security-operator
+  - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
+
+deployment-validation-operator
+  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 0.7 (in alpha)
+
+devspaces
+  - 4.12, 4.13: publish patches for operator minor versions 3.18, 3.19, 3.20, 3.21, 3.22, 3.23, 3.24, 3.25 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 3.25 (in stable)
+
+devworkspace-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.33, 0.34, 0.35, 0.36, 0.37, 0.38 (in fast)
+  - 4.14, 4.15: publish patches for operator minor versions 0.38 (in fast)
+
+dns-operator
+  - 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+dpu-network-operator
+  - 4.12: publish patches for operator minor versions 4.13 (in stable)
+
+external-dns-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 1.3 (in stable-v1, stable-v1.3)
+
+fence-agents-remediation
+  - 4.12, 4.13: publish patches for operator minor versions 0.5 (in 4.18-eus, stable), 0.6 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.6 (in stable)
+
+gatekeeper-operator-product
+  - 4.12, 4.13: publish patches for operator minor versions 3.17 (in 3.17, 3.18, 3.19, stable), 3.18 (in 3.18, 3.19, stable), 3.19 (in 3.19, stable), 3.20 (in 3.20, stable)
+
+gcp-filestore-csi-driver-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+ingress-node-firewall
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+jaeger-product
+  - 4.13: publish patches for operator minor versions 1.62, 1.65 (in stable)
+
+kernel-module-management
+  - 4.12, 4.13: publish patches for operator minor versions 2.0 (in release-2.0, release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.1 (in release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.2 (in release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.3 (in release-2.3, release-2.4, release-2.5, stable), 2.4 (in release-2.4, release-2.5, stable), 2.5 (in release-2.5, stable)
+
+kernel-module-management-hub
+  - 4.12, 4.13: publish patches for operator minor versions 2.0 (in release-2.0, release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.1 (in release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.2 (in release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.3 (in release-2.3, release-2.4, release-2.5, stable), 2.4 (in release-2.4, release-2.5, stable), 2.5 (in release-2.5, stable)
+
+kiali-ossm
+  - 4.12, 4.13: publish patches for operator minor versions 1.73, 1.89 (in candidate, stable), 2.1 (in candidate), 2.4, 2.11, 2.17 (in stable)
+
+kubernetes-nmstate-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+kubevirt-hyperconverged
+  - 4.12: publish patches for operator minor versions 4.13, 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.13: publish patches for operator minor versions 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.14: publish patches for operator minor versions 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.15: publish patches for operator minor versions 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.16: publish patches for operator minor versions 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable, candidate)
+
+lifecycle-agent
+  - 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in 4.18, stable)
+
+lightspeed-operator
+  - 4.15: publish patches for operator minor versions 1.0 (in alpha, stable)
+
+limitador-operator
+  - 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+local-storage-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+logic-operator-rhel8
+  - 4.12: publish patches for operator minor versions 1.36 (in alpha)
+
+loki-operator
+  - 4.13, 4.14: publish patches for operator minor versions 6.1 (in stable-6.1), 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.15: publish patches for operator minor versions 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.16: publish patches for operator minor versions 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.17: publish patches for operator minor versions 6.4 (in stable-6.4)
+
+lvms-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+machine-deletion-remediation
+  - 4.12, 4.13: publish patches for operator minor versions 0.4 (in 4.18-eus, stable), 0.5 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.5 (in stable)
+
+mcg-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+metallb-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+mtc-operator
+  - 4.12, 4.13: publish patches for operator minor versions 1.8 (in release-v1.8)
+
+mtv-operator
+  - 4.12, 4.13: publish patches for operator minor versions 2.7 (in release-v2.7), 2.8 (in release-v2.8), 2.9 (in release-v2.9), 2.10 (in release-v2.10)
+  - 4.14, 4.15: publish patches for operator minor versions 2.8 (in release-v2.8), 2.9 (in release-v2.9), 2.10 (in release-v2.10)
+  - 4.16: publish patches for operator minor versions 2.9 (in release-v2.9), 2.10 (in release-v2.10)
+  - 4.17: publish patches for operator minor versions 2.10 (in release-v2.10)
+
+multicluster-engine
+  - 4.12, 4.13: publish patches for operator minor versions 2.7 (in stable-2.7), 2.8 (in stable-2.8), 2.9 (in stable-2.9), 2.10 (in stable-2.10)
+  - 4.14: publish patches for operator minor versions 2.8 (in stable-2.8), 2.9 (in stable-2.9), 2.10 (in stable-2.10)
+  - 4.15: publish patches for operator minor versions 2.9 (in stable-2.9), 2.10 (in stable-2.10)
+  - 4.16: publish patches for operator minor versions 2.10 (in stable-2.10)
+
+multicluster-global-hub-operator-rh
+  - 4.13: publish patches for operator minor versions 1.4 (in release-1.4), 1.5 (in release-1.5), 1.6 (in release-1.6)
+  - 4.14: publish patches for operator minor versions 1.5 (in release-1.5), 1.6 (in release-1.6)
+  - 4.15: publish patches for operator minor versions 1.6 (in release-1.6)
+
+nbde-tang-server
+  - 4.17: publish patches for operator minor versions 1.1 (in stable)
+
+netobserv-operator
+  - 4.13: publish patches for operator minor versions 1.8, 1.9, 1.10 (in stable)
+
+nfd
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+node-healthcheck-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.9 (in 4.18-eus, stable), 0.10 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.10 (in stable)
+
+node-maintenance-operator
+  - 4.12, 4.13: publish patches for operator minor versions 5.4 (in 4.18-eus, stable), 5.5 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 5.5 (in stable)
+
+numaresources-operator
+  - 4.17: publish patches for operator minor versions 4.18 (in 4.18)
+
+ocs-client-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+ocs-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-csi-addons-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-multicluster-orchestrator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-prometheus-operator
+  - 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odr-cluster-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odr-hub-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+openshift-builds-operator
+  - 4.14: publish patches for operator minor versions 1.4 (in builds-1.4, latest), 1.5 (in builds-1.5, latest), 1.6 (in builds-1.6, latest)
+  - 4.15: publish patches for operator minor versions 1.5 (in builds-1.5, latest), 1.6 (in builds-1.6, latest)
+
+openshift-cert-manager-operator
+  - 4.14, 4.15: publish patches for operator minor versions 1.17 (in stable-v1, stable-v1.17, stable-v1.18), 1.18 (in stable-v1, stable-v1.18)
+  - 4.16: publish patches for operator minor versions 1.18 (in stable-v1, stable-v1.18)
+
+openshift-pipelines-operator-rh
+  - 4.12: publish patches for operator minor versions 1.18 (in latest, pipelines-1.18), 1.19 (in latest, pipelines-1.19), 1.20 (in latest, pipelines-1.20), 1.21 (in latest, pipelines-1.21)
+  - 4.13: publish patches for operator minor versions 1.15 (in latest, pipelines-1.15, pipelines-1.16, pipelines-1.17), 1.16 (in latest, pipelines-1.16, pipelines-1.17), 1.17 (in latest, pipelines-1.17), 1.18 (in latest, pipelines-1.18), 1.19 (in latest, pipelines-1.19), 1.20 (in latest, pipelines-1.20), 1.21 (in latest, pipelines-1.21)
+  - 4.15: publish patches for operator minor versions 1.19 (in latest, pipelines-1.19), 1.20 (in latest, pipelines-1.20), 1.21 (in latest, pipelines-1.21)
+
+openshift-secondary-scheduler-operator
+  - 4.12, 4.13: publish patches for operator minor versions 1.2, 1.3, 1.4 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 1.3, 1.4 (in stable)
+  - 4.16, 4.17: publish patches for operator minor versions 1.4 (in stable)
+
+opentelemetry-product
+  - 4.12, 4.15: publish patches for operator minor versions 0.140 (in stable)
+  - 4.13: publish patches for operator minor versions 0.113, 0.119, 0.127, 0.135, 0.140 (in stable)
+
+power-monitoring-operator
+  - 4.14, 4.15: publish patches for operator minor versions 0.4, 0.5 (in tech-preview)
+  - 4.16: publish patches for operator minor versions 0.5 (in tech-preview)
+
+ptp-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+quay-bridge-operator
+  - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
+
+quay-operator
+  - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
+
+recipe
+  - 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+redhat-oadp-operator
+  - 4.12: publish patches for operator minor versions 1.4 (in stable-1.4)
+
+rhbk-operator
+  - 4.13, 4.15: publish patches for operator minor versions 26.0 (in stable-v26, stable-v26.0), 26.2 (in stable-v26, stable-v26.2), 26.4 (in stable-v26, stable-v26.4)
+
+rhcl-operator
+  - 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+rhdh
+  - 4.12, 4.13: publish patches for operator minor versions 1.3 (in fast, fast-1.3), 1.4 (in fast, fast-1.4), 1.5 (in fast, fast-1.5), 1.6 (in fast, fast-1.6), 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
+  - 4.14: publish patches for operator minor versions 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
+  - 4.15: publish patches for operator minor versions 1.6 (in fast, fast-1.6), 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
+
+rhods-operator
+  - 4.12, 4.13: publish patches for operator minor versions 2.16 (in eus-2.16, eus-2.25, stable, stable-2.16, stable-2.19, stable-2.22, stable-2.25), 2.17, 2.18, 2.20, 2.23, 2.24 (in alpha, fast), 2.19 (in alpha, fast, stable, stable-2.19, stable-2.22, stable-2.25), 2.21 (in alpha, embedded, fast), 2.22 (in alpha, fast, stable, stable-2.22, stable-2.25), 2.25 (in alpha, eus-2.25, fast, stable, stable-2.25)
+  - 4.14: publish patches for operator minor versions 2.21 (in embedded), 2.22 (in stable, stable-2.22, stable-2.25), 2.24 (in alpha, fast), 2.25 (in alpha, eus-2.25, fast, stable, stable-2.25)
+  - 4.15: publish patches for operator minor versions 2.22 (in stable-2.22), 2.25 (in alpha, eus-2.25, fast, stable, stable-2.25)
+
+rhtas-operator
+  - 4.13: publish patches for operator minor versions 1.1 (in stable, stable-v1.1), 1.2 (in stable, stable-v1.2), 1.3 (in stable, stable-v1.3)
+  - 4.14: publish patches for operator minor versions 1.2 (in stable, stable-v1.2), 1.3 (in stable, stable-v1.3)
+  - 4.15: publish patches for operator minor versions 1.3 (in stable, stable-v1.3)
+
+rook-ceph-operator
+  - 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+run-once-duration-override-operator
+  - 4.13, 4.14: publish patches for operator minor versions 1.1, 1.2 (in stable)
+  - 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+sandboxed-containers-operator
+  - 4.12, 4.13, 4.14: publish patches for operator minor versions 1.7, 1.8, 1.9, 1.10, 1.11 (in stable)
+  - 4.15: publish patches for operator minor versions 1.10, 1.11 (in stable)
+  - 4.16: publish patches for operator minor versions 1.11 (in stable)
+
+secrets-store-csi-driver-operator
+  - 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+self-node-remediation
+  - 4.12, 4.13: publish patches for operator minor versions 0.10 (in 4.18-eus, stable), 0.11 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.11 (in stable)
+
+serverless-operator
+  - 4.12: publish patches for operator minor versions 1.33 (in stable-1.33), 1.34 (in stable, stable-1.34, stable-1.35, stable-1.36, stable-1.37), 1.35 (in stable, stable-1.35, stable-1.36, stable-1.37), 1.36 (in stable, stable-1.36, stable-1.37), 1.37 (in stable, stable-1.37)
+  - 4.13: publish patches for operator minor versions 1.35 (in stable, stable-1.35, stable-1.36, stable-1.37), 1.36 (in stable, stable-1.36, stable-1.37), 1.37 (in stable, stable-1.37)
+
+service-telemetry-operator
+  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 1.5 (in stable-1.5)
+
+servicemeshoperator
+  - 4.12, 4.13: publish patches for operator minor versions 2.6 (in 1.0, stable)
+
+servicemeshoperator3
+  - 4.14, 4.15: publish patches for operator minor versions 3.1 (in stable, stable-3.1), 3.2 (in stable, stable-3.2)
+  - 4.16, 4.17: publish patches for operator minor versions 3.2 (in stable, stable-3.2)
+
+smart-gateway-operator
+  - 4.14, 4.15: publish patches for operator minor versions 5.0 (in stable-1.5)
+
+smb-csi-driver-operator
+  - 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+sriov-network-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+submariner
+  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 0.20 (in stable-0.20), 0.21 (in stable-0.21), 0.22 (in stable-0.22)
+
+tempo-product
+  - 4.13: publish patches for operator minor versions 0.14, 0.15, 0.16, 0.18, 0.19 (in stable)
+  - 4.15: publish patches for operator minor versions 0.19 (in stable)
+
+topology-aware-lifecycle-manager
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in 4.18, stable)
+
+trustee-operator
+  - 4.15: publish patches for operator minor versions 0.4, 1.0 (in stable)
+  - 4.16: publish patches for operator minor versions 1.0 (in stable)
+
+vertical-pod-autoscaler
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+volsync-product
+  - 4.12, 4.13: publish patches for operator minor versions 0.12 (in stable, stable-0.12), 0.13 (in stable, stable-0.13), 0.14 (in stable, stable-0.14)
+
+web-terminal
+  - 4.12: publish patches for operator minor versions 1.8, 1.9, 1.10, 1.11, 1.12, 1.13 (in fast)
+  - 4.13: publish patches for operator minor versions 1.9, 1.10, 1.11, 1.12, 1.13 (in fast)
+  - 4.14: publish patches for operator minor versions 1.10, 1.11, 1.12, 1.13 (in fast)
+  - 4.15: publish patches for operator minor versions 1.11, 1.12, 1.13 (in fast)
+  - 4.16: publish patches for operator minor versions 1.12, 1.13 (in fast)
+  - 4.17: publish patches for operator minor versions 1.13 (in fast)
+
+windows-machine-config-operator
+  - 4.17: publish patches for operator minor versions 10.18 (in stable)
+

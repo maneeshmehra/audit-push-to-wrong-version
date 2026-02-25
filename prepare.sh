@@ -84,26 +84,30 @@ pull_catalog() {
 
     if ! opm render "$image_ref" > "$output_dir/catalog.json"; then
         echo "Failed to download $image_ref"
-        exit 1
+        return 1
     fi
 
     create_digest "$output_dir" "$current_digest" "$image_ref"
     echo "Successfully cached $image_ref (digest: $current_digest)"
 }
 
-# If catalogs/latest directory already exists, move it to catalogs/{yyyymmdd_hhmm} based on its modtime
-if [[ -d catalogs/latest ]]; then
-    mod_date=$(date -r catalogs/latest +%Y%m%d_%H%M)
-    backup_dir="catalogs/${mod_date}"
-    if [[ -e "$backup_dir" ]]; then
-        echo "Error: backup directory $backup_dir already exists"
+
+INCIDENT_4_18_EXPECTED_DIGEST="${INCIDENT_IMAGE_4_18#*sha256:}"
+if is_catalog_current "catalogs/incident/4.18" "$INCIDENT_4_18_EXPECTED_DIGEST"; then
+    echo "catalogs/incident/4.18 is up to date (digest: $INCIDENT_4_18_EXPECTED_DIGEST)"
+else
+    _stderr_file=$(mktemp)
+    if ! pull_catalog "$INCIDENT_IMAGE_4_18" "catalogs/incident/4.18" 2>"$_stderr_file"; then
+        cat "$_stderr_file" >&2
+        if grep -q "no such host" "$_stderr_file"; then
+            echo ""
+            echo "Are you connected to the Red Hat VPN?"
+        fi
+        rm -f "$_stderr_file"
         exit 1
     fi
-    echo "Moving existing catalogs/latest directory to $backup_dir"
-    mv catalogs/latest "$backup_dir"
+    rm -f "$_stderr_file"
 fi
-
-pull_catalog "$INCIDENT_IMAGE_4_18" "catalogs/incident/4.18"
 
 for image in "${IMAGES[@]}"; do
     for version in "${INCIDENT_VERSIONS[@]}"; do
