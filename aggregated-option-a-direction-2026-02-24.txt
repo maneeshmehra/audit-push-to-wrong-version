@@ -1,166 +1,344 @@
-In OCP version catalogs 4.12, 4.13, package 3scale-operator needs to publish patches for operator minor versions 0.13 in all of the following channels: threescale-2.16
-In OCP version catalogs 4.12, 4.13, package advanced-cluster-management needs to publish patches for operator minor versions 2.12, 2.13, 2.14, 2.15 in all of the following channels: release-2.12, release-2.13, release-2.14, release-2.15
-In OCP version catalogs 4.14, package advanced-cluster-management needs to publish patches for operator minor versions 2.13, 2.14, 2.15 in all of the following channels: release-2.13, release-2.14, release-2.15
-In OCP version catalogs 4.15, package advanced-cluster-management needs to publish patches for operator minor versions 2.14, 2.15 in all of the following channels: release-2.14, release-2.15
-In OCP version catalogs 4.16, package advanced-cluster-management needs to publish patches for operator minor versions 2.15 in all of the following channels: release-2.15
-In OCP version catalogs 4.12, package ansible-automation-platform-operator needs to publish patches for operator minor versions 2.5, 2.6 in all of the following channels: stable-2.5-cluster-scoped, stable-2.5, stable-2.6, stable-2.6-cluster-scoped
-In OCP version catalogs 4.13, 4.15, package ansible-automation-platform-operator needs to publish patches for operator minor versions 2.4, 2.5, 2.6 in all of the following channels: stable-2.4, stable-2.4-cluster-scoped, stable-2.5-cluster-scoped, stable-2.5, stable-2.6, stable-2.6-cluster-scoped
-In OCP version catalogs 4.12, 4.13, package apicast-operator needs to publish patches for operator minor versions 0.7, 0.13 in all of the following channels: threescale-2.16, threescale-2.13
-In OCP version catalogs 4.14, package apicast-operator needs to publish patches for operator minor versions 0.7 in all of the following channels: threescale-2.13
-In OCP version catalogs 4.12, 4.13, package authorino-operator needs to publish patches for operator minor versions 1.1, 1.2 in all of the following channels: stable, tech-preview-v1
-In OCP version catalogs 4.14, 4.15, 4.16, package authorino-operator needs to publish patches for operator minor versions 1.2 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package aws-efs-csi-driver-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, package aws-load-balancer-operator needs to publish patches for operator minor versions 1.0, 1.1, 1.2 in all of the following channels: stable-v1.0, stable-v1, stable-v1.1, stable-v1.2
-In OCP version catalogs 4.13, package aws-load-balancer-operator needs to publish patches for operator minor versions 1.1, 1.2 in all of the following channels: stable-v1, stable-v1.1, stable-v1.2
-In OCP version catalogs 4.14, 4.15, 4.16, package aws-load-balancer-operator needs to publish patches for operator minor versions 1.2 in all of the following channels: stable-v1, stable-v1.2
-In OCP version catalogs 4.17, package cephcsi-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, package cluster-kube-descheduler-operator needs to publish patches for operator minor versions 4.13, 4.14, 5.0, 5.1 in all of the following channels: 4.13, stable
-In OCP version catalogs 4.13, package cluster-kube-descheduler-operator needs to publish patches for operator minor versions 4.14, 5.0, 5.1 in all of the following channels: stable
-In OCP version catalogs 4.14, 4.15, 4.16, package cluster-kube-descheduler-operator needs to publish patches for operator minor versions 5.0, 5.1 in all of the following channels: stable
-In OCP version catalogs 4.13, 4.14, package cluster-logging needs to publish patches for operator minor versions 6.1, 6.2, 6.3, 6.4 in all of the following channels: stable-6.1, stable-6.2, stable-6.3, stable-6.4
-In OCP version catalogs 4.15, package cluster-logging needs to publish patches for operator minor versions 6.2, 6.3, 6.4 in all of the following channels: stable-6.2, stable-6.3, stable-6.4
-In OCP version catalogs 4.16, package cluster-logging needs to publish patches for operator minor versions 6.3, 6.4 in all of the following channels: stable-6.3, stable-6.4
-In OCP version catalogs 4.17, package cluster-logging needs to publish patches for operator minor versions 6.4 in all of the following channels: stable-6.4
-In OCP version catalogs 4.16, package cluster-observability-operator needs to publish patches for operator minor versions 1.3 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package clusterresourceoverride needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.17, package container-security-operator needs to publish patches for operator minor versions 3.5 in all of the following channels: quay-v3.5
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, package deployment-validation-operator needs to publish patches for operator minor versions 0.7 in all of the following channels: alpha
-In OCP version catalogs 4.12, 4.13, package devspaces needs to publish patches for operator minor versions 3.18, 3.19, 3.20, 3.21, 3.22, 3.23, 3.24, 3.25 in all of the following channels: stable
-In OCP version catalogs 4.14, 4.15, package devspaces needs to publish patches for operator minor versions 3.25 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package devworkspace-operator needs to publish patches for operator minor versions 0.33, 0.34, 0.35, 0.36, 0.37, 0.38 in all of the following channels: fast
-In OCP version catalogs 4.14, 4.15, package devworkspace-operator needs to publish patches for operator minor versions 0.38 in all of the following channels: fast
-In OCP version catalogs 4.16, package dns-operator needs to publish patches for operator minor versions 1.2 in all of the following channels: stable
-In OCP version catalogs 4.12, package dpu-network-operator needs to publish patches for operator minor versions 4.13 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package external-dns-operator needs to publish patches for operator minor versions 1.3 in all of the following channels: stable-v1, stable-v1.3
-In OCP version catalogs 4.12, 4.13, package fence-agents-remediation needs to publish patches for operator minor versions 0.5, 0.6 in all of the following channels: 4.18-eus, stable
-In OCP version catalogs 4.14, 4.15, package fence-agents-remediation needs to publish patches for operator minor versions 0.6 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package gatekeeper-operator-product needs to publish patches for operator minor versions 3.17, 3.18, 3.19, 3.20 in all of the following channels: 3.17, 3.18, 3.19, stable, 3.20
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package gcp-filestore-csi-driver-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package ingress-node-firewall needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.13, package jaeger-product needs to publish patches for operator minor versions 1.62, 1.65 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package kernel-module-management needs to publish patches for operator minor versions 2.0, 2.1, 2.2, 2.3, 2.4, 2.5 in all of the following channels: release-2.0, release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable
-In OCP version catalogs 4.12, 4.13, package kernel-module-management-hub needs to publish patches for operator minor versions 2.0, 2.1, 2.2, 2.3, 2.4, 2.5 in all of the following channels: release-2.0, release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable
-In OCP version catalogs 4.12, 4.13, package kiali-ossm needs to publish patches for operator minor versions 1.73, 1.89, 2.1, 2.4, 2.11, 2.17 in all of the following channels: candidate, stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package kubernetes-nmstate-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, package kubevirt-hyperconverged needs to publish patches for operator minor versions 4.13, 4.14, 4.15, 4.16, 4.17, 4.18 in all of the following channels: stable, candidate
-In OCP version catalogs 4.13, package kubevirt-hyperconverged needs to publish patches for operator minor versions 4.14, 4.15, 4.16, 4.17, 4.18 in all of the following channels: stable, candidate
-In OCP version catalogs 4.14, package kubevirt-hyperconverged needs to publish patches for operator minor versions 4.15, 4.16, 4.17, 4.18 in all of the following channels: stable, candidate
-In OCP version catalogs 4.15, package kubevirt-hyperconverged needs to publish patches for operator minor versions 4.16, 4.17, 4.18 in all of the following channels: stable, candidate
-In OCP version catalogs 4.16, package kubevirt-hyperconverged needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable, candidate
-In OCP version catalogs 4.17, package kubevirt-hyperconverged needs to publish patches for operator minor versions 4.18 in all of the following channels: stable, candidate
-In OCP version catalogs 4.14, 4.15, 4.16, 4.17, package lifecycle-agent needs to publish patches for operator minor versions 4.18 in all of the following channels: 4.18, stable
-In OCP version catalogs 4.15, package lightspeed-operator needs to publish patches for operator minor versions 1.0 in all of the following channels: alpha, stable
-In OCP version catalogs 4.16, package limitador-operator needs to publish patches for operator minor versions 1.2 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package local-storage-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, package logic-operator-rhel8 needs to publish patches for operator minor versions 1.36 in all of the following channels: alpha
-In OCP version catalogs 4.13, 4.14, package loki-operator needs to publish patches for operator minor versions 6.1, 6.2, 6.3, 6.4 in all of the following channels: stable-6.1, stable-6.2, stable-6.3, stable-6.4
-In OCP version catalogs 4.15, package loki-operator needs to publish patches for operator minor versions 6.2, 6.3, 6.4 in all of the following channels: stable-6.2, stable-6.3, stable-6.4
-In OCP version catalogs 4.16, package loki-operator needs to publish patches for operator minor versions 6.3, 6.4 in all of the following channels: stable-6.3, stable-6.4
-In OCP version catalogs 4.17, package loki-operator needs to publish patches for operator minor versions 6.4 in all of the following channels: stable-6.4
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package lvms-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, package machine-deletion-remediation needs to publish patches for operator minor versions 0.4, 0.5 in all of the following channels: 4.18-eus, stable
-In OCP version catalogs 4.14, 4.15, package machine-deletion-remediation needs to publish patches for operator minor versions 0.5 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package mcg-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package mcg-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package metallb-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package mtc-operator needs to publish patches for operator minor versions 1.8 in all of the following channels: release-v1.8
-In OCP version catalogs 4.12, 4.13, package mtv-operator needs to publish patches for operator minor versions 2.7, 2.8, 2.9, 2.10 in all of the following channels: release-v2.10, release-v2.7, release-v2.8, release-v2.9
-In OCP version catalogs 4.14, 4.15, package mtv-operator needs to publish patches for operator minor versions 2.8, 2.9, 2.10 in all of the following channels: release-v2.10, release-v2.8, release-v2.9
-In OCP version catalogs 4.16, package mtv-operator needs to publish patches for operator minor versions 2.9, 2.10 in all of the following channels: release-v2.10, release-v2.9
-In OCP version catalogs 4.17, package mtv-operator needs to publish patches for operator minor versions 2.10 in all of the following channels: release-v2.10
-In OCP version catalogs 4.12, 4.13, package multicluster-engine needs to publish patches for operator minor versions 2.7, 2.8, 2.9, 2.10 in all of the following channels: stable-2.10, stable-2.7, stable-2.8, stable-2.9
-In OCP version catalogs 4.14, package multicluster-engine needs to publish patches for operator minor versions 2.8, 2.9, 2.10 in all of the following channels: stable-2.10, stable-2.8, stable-2.9
-In OCP version catalogs 4.15, package multicluster-engine needs to publish patches for operator minor versions 2.9, 2.10 in all of the following channels: stable-2.10, stable-2.9
-In OCP version catalogs 4.16, package multicluster-engine needs to publish patches for operator minor versions 2.10 in all of the following channels: stable-2.10
-In OCP version catalogs 4.13, package multicluster-global-hub-operator-rh needs to publish patches for operator minor versions 1.4, 1.5, 1.6 in all of the following channels: release-1.4, release-1.5, release-1.6
-In OCP version catalogs 4.14, package multicluster-global-hub-operator-rh needs to publish patches for operator minor versions 1.5, 1.6 in all of the following channels: release-1.5, release-1.6
-In OCP version catalogs 4.15, package multicluster-global-hub-operator-rh needs to publish patches for operator minor versions 1.6 in all of the following channels: release-1.6
-In OCP version catalogs 4.17, package nbde-tang-server needs to publish patches for operator minor versions 1.1 in all of the following channels: stable
-In OCP version catalogs 4.13, package netobserv-operator needs to publish patches for operator minor versions 1.8, 1.9, 1.10 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package nfd needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package node-healthcheck-operator needs to publish patches for operator minor versions 0.9, 0.10 in all of the following channels: stable, 4.18-eus
-In OCP version catalogs 4.14, 4.15, package node-healthcheck-operator needs to publish patches for operator minor versions 0.10 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package node-maintenance-operator needs to publish patches for operator minor versions 5.4, 5.5 in all of the following channels: 4.18-eus, stable
-In OCP version catalogs 4.14, 4.15, package node-maintenance-operator needs to publish patches for operator minor versions 5.5 in all of the following channels: stable
-In OCP version catalogs 4.17, package numaresources-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: 4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package ocs-client-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package ocs-client-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package ocs-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package ocs-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package odf-csi-addons-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package odf-csi-addons-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package odf-multicluster-orchestrator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package odf-multicluster-orchestrator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package odf-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package odf-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.16, package odf-prometheus-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package odf-prometheus-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package odr-cluster-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package odr-cluster-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, package odr-hub-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package odr-hub-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.14, package openshift-builds-operator needs to publish patches for operator minor versions 1.4, 1.5, 1.6 in all of the following channels: builds-1.4, latest, builds-1.5, builds-1.6
-In OCP version catalogs 4.15, package openshift-builds-operator needs to publish patches for operator minor versions 1.5, 1.6 in all of the following channels: builds-1.5, latest, builds-1.6
-In OCP version catalogs 4.14, 4.15, package openshift-cert-manager-operator needs to publish patches for operator minor versions 1.17, 1.18 in all of the following channels: stable-v1, stable-v1.17, stable-v1.18
-In OCP version catalogs 4.16, package openshift-cert-manager-operator needs to publish patches for operator minor versions 1.18 in all of the following channels: stable-v1, stable-v1.18
-In OCP version catalogs 4.12, package openshift-pipelines-operator-rh needs to publish patches for operator minor versions 1.18, 1.19, 1.20, 1.21 in all of the following channels: latest, pipelines-1.18, pipelines-1.19, pipelines-1.20, pipelines-1.21
-In OCP version catalogs 4.13, package openshift-pipelines-operator-rh needs to publish patches for operator minor versions 1.15, 1.16, 1.17, 1.18, 1.19, 1.20, 1.21 in all of the following channels: latest, pipelines-1.15, pipelines-1.16, pipelines-1.17, pipelines-1.18, pipelines-1.19, pipelines-1.20, pipelines-1.21
-In OCP version catalogs 4.15, package openshift-pipelines-operator-rh needs to publish patches for operator minor versions 1.19, 1.20, 1.21 in all of the following channels: latest, pipelines-1.19, pipelines-1.20, pipelines-1.21
-In OCP version catalogs 4.12, 4.13, package openshift-secondary-scheduler-operator needs to publish patches for operator minor versions 1.2, 1.3, 1.4 in all of the following channels: stable
-In OCP version catalogs 4.14, 4.15, package openshift-secondary-scheduler-operator needs to publish patches for operator minor versions 1.3, 1.4 in all of the following channels: stable
-In OCP version catalogs 4.16, 4.17, package openshift-secondary-scheduler-operator needs to publish patches for operator minor versions 1.1, 1.4 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.15, package opentelemetry-product needs to publish patches for operator minor versions 0.140 in all of the following channels: stable
-In OCP version catalogs 4.13, package opentelemetry-product needs to publish patches for operator minor versions 0.113, 0.119, 0.127, 0.135, 0.140 in all of the following channels: stable
-In OCP version catalogs 4.14, 4.15, package power-monitoring-operator needs to publish patches for operator minor versions 0.4, 0.5 in all of the following channels: tech-preview
-In OCP version catalogs 4.16, package power-monitoring-operator needs to publish patches for operator minor versions 0.5 in all of the following channels: tech-preview
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package ptp-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.17, package quay-bridge-operator needs to publish patches for operator minor versions 3.5 in all of the following channels: quay-v3.5
-In OCP version catalogs 4.17, package quay-operator needs to publish patches for operator minor versions 3.5 in all of the following channels: quay-v3.5
-In OCP version catalogs 4.16, package recipe needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package recipe needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.12, package redhat-oadp-operator needs to publish patches for operator minor versions 1.4 in all of the following channels: stable-1.4
-In OCP version catalogs 4.13, 4.15, package rhbk-operator needs to publish patches for operator minor versions 26.0, 26.2, 26.4 in all of the following channels: stable-v26, stable-v26.0, stable-v26.2, stable-v26.4
-In OCP version catalogs 4.16, package rhcl-operator needs to publish patches for operator minor versions 1.2 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package rhdh needs to publish patches for operator minor versions 1.3, 1.4, 1.5, 1.6, 1.7, 1.8 in all of the following channels: fast, fast-1.3, fast-1.4, fast-1.5, fast-1.6, fast-1.7, fast-1.8
-In OCP version catalogs 4.14, package rhdh needs to publish patches for operator minor versions 1.7, 1.8 in all of the following channels: fast, fast-1.7, fast-1.8
-In OCP version catalogs 4.15, package rhdh needs to publish patches for operator minor versions 1.6, 1.7, 1.8 in all of the following channels: fast, fast-1.6, fast-1.7, fast-1.8
-In OCP version catalogs 4.12, 4.13, package rhods-operator needs to publish patches for operator minor versions 2.16, 2.17, 2.18, 2.19, 2.20, 2.21, 2.22, 2.23, 2.24, 2.25 in all of the following channels: eus-2.16, eus-2.25, stable, stable-2.16, stable-2.19, stable-2.22, stable-2.25, alpha, fast, embedded
-In OCP version catalogs 4.14, package rhods-operator needs to publish patches for operator minor versions 2.21, 2.22, 2.24, 2.25 in all of the following channels: embedded, stable, stable-2.22, stable-2.25, alpha, fast, eus-2.25
-In OCP version catalogs 4.15, package rhods-operator needs to publish patches for operator minor versions 2.22, 2.25 in all of the following channels: stable-2.22, alpha, eus-2.25, fast, stable, stable-2.25
-In OCP version catalogs 4.13, package rhtas-operator needs to publish patches for operator minor versions 1.1, 1.2, 1.3 in all of the following channels: stable, stable-v1.1, stable-v1.2, stable-v1.3
-In OCP version catalogs 4.14, package rhtas-operator needs to publish patches for operator minor versions 1.2, 1.3 in all of the following channels: stable, stable-v1.2, stable-v1.3
-In OCP version catalogs 4.15, package rhtas-operator needs to publish patches for operator minor versions 1.3 in all of the following channels: stable, stable-v1.3
-In OCP version catalogs 4.16, package rook-ceph-operator needs to publish patches for operator minor versions 4.17, 4.18 in all of the following channels: stable-4.17, stable-4.18
-In OCP version catalogs 4.17, package rook-ceph-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable-4.18
-In OCP version catalogs 4.13, 4.14, package run-once-duration-override-operator needs to publish patches for operator minor versions 1.1, 1.2 in all of the following channels: stable
-In OCP version catalogs 4.15, 4.16, package run-once-duration-override-operator needs to publish patches for operator minor versions 1.2 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, package sandboxed-containers-operator needs to publish patches for operator minor versions 1.7, 1.8, 1.9, 1.10, 1.11 in all of the following channels: stable
-In OCP version catalogs 4.15, package sandboxed-containers-operator needs to publish patches for operator minor versions 1.10, 1.11 in all of the following channels: stable
-In OCP version catalogs 4.16, package sandboxed-containers-operator needs to publish patches for operator minor versions 1.11 in all of the following channels: stable
-In OCP version catalogs 4.14, 4.15, 4.16, 4.17, package secrets-store-csi-driver-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package self-node-remediation needs to publish patches for operator minor versions 0.10, 0.11 in all of the following channels: 4.18-eus, stable
-In OCP version catalogs 4.14, 4.15, package self-node-remediation needs to publish patches for operator minor versions 0.11 in all of the following channels: stable
-In OCP version catalogs 4.12, package serverless-operator needs to publish patches for operator minor versions 1.33, 1.34, 1.35, 1.36, 1.37 in all of the following channels: stable-1.33, stable, stable-1.34, stable-1.35, stable-1.36, stable-1.37
-In OCP version catalogs 4.13, package serverless-operator needs to publish patches for operator minor versions 1.35, 1.36, 1.37 in all of the following channels: stable, stable-1.35, stable-1.36, stable-1.37
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, package service-telemetry-operator needs to publish patches for operator minor versions 1.5 in all of the following channels: stable-1.5
-In OCP version catalogs 4.12, 4.13, package servicemeshoperator needs to publish patches for operator minor versions 2.6 in all of the following channels: 1.0, stable
-In OCP version catalogs 4.14, 4.15, package servicemeshoperator3 needs to publish patches for operator minor versions 3.1, 3.2 in all of the following channels: stable, stable-3.1, stable-3.2
-In OCP version catalogs 4.16, 4.17, package servicemeshoperator3 needs to publish patches for operator minor versions 3.2 in all of the following channels: stable, stable-3.2
-In OCP version catalogs 4.14, 4.15, package smart-gateway-operator needs to publish patches for operator minor versions 5.0 in all of the following channels: stable-1.5
-In OCP version catalogs 4.16, 4.17, package smb-csi-driver-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package sriov-network-operator needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, package submariner needs to publish patches for operator minor versions 0.20, 0.21, 0.22 in all of the following channels: stable-0.20, stable-0.21, stable-0.22
-In OCP version catalogs 4.13, package tempo-product needs to publish patches for operator minor versions 0.14, 0.15, 0.16, 0.18, 0.19 in all of the following channels: stable
-In OCP version catalogs 4.15, package tempo-product needs to publish patches for operator minor versions 0.19 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package topology-aware-lifecycle-manager needs to publish patches for operator minor versions 4.18 in all of the following channels: 4.18, stable
-In OCP version catalogs 4.15, package trustee-operator needs to publish patches for operator minor versions 0.4, 1.0 in all of the following channels: stable
-In OCP version catalogs 4.16, package trustee-operator needs to publish patches for operator minor versions 1.0 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, package vertical-pod-autoscaler needs to publish patches for operator minor versions 4.18 in all of the following channels: stable
-In OCP version catalogs 4.12, 4.13, package volsync-product needs to publish patches for operator minor versions 0.12, 0.13, 0.14 in all of the following channels: stable, stable-0.12, stable-0.13, stable-0.14
-In OCP version catalogs 4.12, package web-terminal needs to publish patches for operator minor versions 1.8, 1.9, 1.10, 1.11, 1.12, 1.13 in all of the following channels: fast
-In OCP version catalogs 4.13, package web-terminal needs to publish patches for operator minor versions 1.9, 1.10, 1.11, 1.12, 1.13 in all of the following channels: fast
-In OCP version catalogs 4.14, package web-terminal needs to publish patches for operator minor versions 1.10, 1.11, 1.12, 1.13 in all of the following channels: fast
-In OCP version catalogs 4.15, package web-terminal needs to publish patches for operator minor versions 1.11, 1.12, 1.13 in all of the following channels: fast
-In OCP version catalogs 4.16, package web-terminal needs to publish patches for operator minor versions 1.12, 1.13 in all of the following channels: fast
-In OCP version catalogs 4.17, package web-terminal needs to publish patches for operator minor versions 1.13 in all of the following channels: fast
-In OCP version catalogs 4.17, package windows-machine-config-operator needs to publish patches for operator minor versions 10.18 in all of the following channels: stable
+3scale-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.13 (in threescale-2.16)
+
+advanced-cluster-management
+  - 4.12, 4.13: publish patches for operator minor versions 2.12 (in release-2.12), 2.13 (in release-2.13), 2.14 (in release-2.14), 2.15 (in release-2.15)
+  - 4.14: publish patches for operator minor versions 2.13 (in release-2.13), 2.14 (in release-2.14), 2.15 (in release-2.15)
+  - 4.15: publish patches for operator minor versions 2.14 (in release-2.14), 2.15 (in release-2.15)
+  - 4.16: publish patches for operator minor versions 2.15 (in release-2.15)
+
+ansible-automation-platform-operator
+  - 4.12, 4.13: publish patches for operator minor versions 2.6 (in stable-2.6, stable-2.6-cluster-scoped)
+
+apicast-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.13 (in threescale-2.16)
+
+authorino-operator
+  - 4.12, 4.13: publish patches for operator minor versions 1.1 (in stable, tech-preview-v1), 1.2 (in stable)
+  - 4.14, 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+aws-efs-csi-driver-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+aws-load-balancer-operator
+  - 4.12: publish patches for operator minor versions 1.0 (in stable-v1.0), 1.1 (in stable-v1, stable-v1.1, stable-v1.2), 1.2 (in stable-v1, stable-v1.2)
+  - 4.13: publish patches for operator minor versions 1.1 (in stable-v1, stable-v1.1, stable-v1.2), 1.2 (in stable-v1, stable-v1.2)
+  - 4.14, 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable-v1, stable-v1.2)
+
+cephcsi-operator
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+cluster-kube-descheduler-operator
+  - 4.12: publish patches for operator minor versions 4.13 (in 4.13), 4.14, 5.0, 5.1 (in stable)
+  - 4.13: publish patches for operator minor versions 4.14, 5.0, 5.1 (in stable)
+  - 4.14: publish patches for operator minor versions 5.0, 5.1 (in stable)
+  - 4.15, 4.16: publish patches for operator minor versions 5.1 (in stable)
+
+cluster-logging
+  - 4.13, 4.14: publish patches for operator minor versions 6.1 (in stable-6.1), 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.15: publish patches for operator minor versions 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.16: publish patches for operator minor versions 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.17: publish patches for operator minor versions 6.4 (in stable-6.4)
+
+clusterresourceoverride
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+container-security-operator
+  - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
+
+deployment-validation-operator
+  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 0.7 (in alpha)
+
+devspaces
+  - 4.12, 4.13: publish patches for operator minor versions 3.18, 3.19, 3.20, 3.21, 3.22, 3.23, 3.24, 3.25 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 3.25 (in stable)
+
+devworkspace-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.33, 0.34, 0.35, 0.36, 0.37, 0.38 (in fast)
+  - 4.14, 4.15: publish patches for operator minor versions 0.38 (in fast)
+
+dns-operator
+  - 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+dpu-network-operator
+  - 4.12: publish patches for operator minor versions 4.13 (in stable)
+
+external-dns-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 1.3 (in stable-v1, stable-v1.3)
+
+fence-agents-remediation
+  - 4.12, 4.13: publish patches for operator minor versions 0.5 (in 4.18-eus, stable), 0.6 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.6 (in stable)
+
+gatekeeper-operator-product
+  - 4.12, 4.13: publish patches for operator minor versions 3.17 (in 3.17, 3.18, 3.19, stable), 3.18 (in 3.18, 3.19, stable), 3.19 (in 3.19, stable), 3.20 (in 3.20, stable)
+
+gcp-filestore-csi-driver-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+ingress-node-firewall
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+jaeger-product
+  - 4.13: publish patches for operator minor versions 1.62, 1.65 (in stable)
+
+kernel-module-management
+  - 4.12, 4.13: publish patches for operator minor versions 2.0 (in release-2.0, release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.1 (in release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.2 (in release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.3 (in release-2.3, release-2.4, release-2.5, stable), 2.4 (in release-2.4, release-2.5, stable), 2.5 (in release-2.5, stable)
+
+kernel-module-management-hub
+  - 4.12, 4.13: publish patches for operator minor versions 2.0 (in release-2.0, release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.1 (in release-2.1, release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.2 (in release-2.2, release-2.3, release-2.4, release-2.5, stable), 2.3 (in release-2.3, release-2.4, release-2.5, stable), 2.4 (in release-2.4, release-2.5, stable), 2.5 (in release-2.5, stable)
+
+kiali-ossm
+  - 4.12, 4.13: publish patches for operator minor versions 1.73 (in candidate, stable), 1.89 (in stable, candidate), 2.1 (in candidate), 2.4, 2.11, 2.17 (in stable)
+
+kubernetes-nmstate-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+kubevirt-hyperconverged
+  - 4.12: publish patches for operator minor versions 4.13, 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.13: publish patches for operator minor versions 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.14: publish patches for operator minor versions 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.15: publish patches for operator minor versions 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.16: publish patches for operator minor versions 4.17 (in stable), 4.18 (in stable, candidate)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable, candidate)
+
+lifecycle-agent
+  - 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in 4.18, stable)
+
+lightspeed-operator
+  - 4.15: publish patches for operator minor versions 1.0 (in alpha, stable)
+
+limitador-operator
+  - 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+local-storage-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+logic-operator-rhel8
+  - 4.12: publish patches for operator minor versions 1.36 (in alpha)
+
+loki-operator
+  - 4.13, 4.14: publish patches for operator minor versions 6.1 (in stable-6.1), 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.15: publish patches for operator minor versions 6.2 (in stable-6.2), 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.16: publish patches for operator minor versions 6.3 (in stable-6.3), 6.4 (in stable-6.4)
+  - 4.17: publish patches for operator minor versions 6.4 (in stable-6.4)
+
+lvms-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+machine-deletion-remediation
+  - 4.12, 4.13: publish patches for operator minor versions 0.4 (in 4.18-eus, stable), 0.5 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.5 (in stable)
+
+mcg-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+metallb-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+mtc-operator
+  - 4.12, 4.13: publish patches for operator minor versions 1.8 (in release-v1.8)
+
+mtv-operator
+  - 4.12, 4.13: publish patches for operator minor versions 2.7 (in release-v2.7), 2.8 (in release-v2.8), 2.9 (in release-v2.9), 2.10 (in release-v2.10)
+  - 4.14, 4.15: publish patches for operator minor versions 2.8 (in release-v2.8), 2.9 (in release-v2.9), 2.10 (in release-v2.10)
+  - 4.16: publish patches for operator minor versions 2.9 (in release-v2.9), 2.10 (in release-v2.10)
+  - 4.17: publish patches for operator minor versions 2.10 (in release-v2.10)
+
+multicluster-engine
+  - 4.12, 4.13: publish patches for operator minor versions 2.7 (in stable-2.7), 2.8 (in stable-2.8), 2.9 (in stable-2.9), 2.10 (in stable-2.10)
+  - 4.14: publish patches for operator minor versions 2.8 (in stable-2.8), 2.9 (in stable-2.9), 2.10 (in stable-2.10)
+  - 4.15: publish patches for operator minor versions 2.9 (in stable-2.9), 2.10 (in stable-2.10)
+  - 4.16: publish patches for operator minor versions 2.10 (in stable-2.10)
+
+multicluster-global-hub-operator-rh
+  - 4.13: publish patches for operator minor versions 1.4 (in release-1.4), 1.5 (in release-1.5), 1.6 (in release-1.6)
+  - 4.14: publish patches for operator minor versions 1.5 (in release-1.5), 1.6 (in release-1.6)
+  - 4.15: publish patches for operator minor versions 1.6 (in release-1.6)
+
+nbde-tang-server
+  - 4.17: publish patches for operator minor versions 1.1 (in stable)
+
+nfd
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+node-healthcheck-operator
+  - 4.12, 4.13: publish patches for operator minor versions 0.9 (in 4.18-eus, stable), 0.10 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.10 (in stable)
+
+node-maintenance-operator
+  - 4.12, 4.13: publish patches for operator minor versions 5.4 (in 4.18-eus, stable), 5.5 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 5.5 (in stable)
+
+numaresources-operator
+  - 4.17: publish patches for operator minor versions 4.18 (in 4.18)
+
+ocs-client-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+ocs-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-csi-addons-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-multicluster-orchestrator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odf-prometheus-operator
+  - 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odr-cluster-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+odr-hub-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+openshift-builds-operator
+  - 4.14: publish patches for operator minor versions 1.4 (in builds-1.4, latest)
+
+openshift-cert-manager-operator
+  - 4.14, 4.15: publish patches for operator minor versions 1.17 (in stable-v1, stable-v1.17, stable-v1.18), 1.18 (in stable-v1, stable-v1.18)
+  - 4.16: publish patches for operator minor versions 1.18 (in stable-v1, stable-v1.18)
+
+openshift-pipelines-operator-rh
+  - 4.12: publish patches for operator minor versions 1.18 (in latest, pipelines-1.18), 1.19 (in latest, pipelines-1.19), 1.20 (in latest, pipelines-1.20), 1.21 (in latest, pipelines-1.21)
+  - 4.13: publish patches for operator minor versions 1.15 (in latest, pipelines-1.15, pipelines-1.16, pipelines-1.17), 1.16 (in latest, pipelines-1.16, pipelines-1.17), 1.17 (in latest, pipelines-1.17), 1.18 (in latest, pipelines-1.18), 1.19 (in latest, pipelines-1.19), 1.20 (in latest, pipelines-1.20), 1.21 (in latest, pipelines-1.21)
+  - 4.15: publish patches for operator minor versions 1.19 (in latest, pipelines-1.19), 1.20 (in latest, pipelines-1.20), 1.21 (in latest, pipelines-1.21)
+
+openshift-secondary-scheduler-operator
+  - 4.12, 4.13: publish patches for operator minor versions 1.2, 1.3, 1.4 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 1.3, 1.4 (in stable)
+  - 4.16, 4.17: publish patches for operator minor versions 1.4 (in stable)
+
+opentelemetry-product
+  - 4.12, 4.15: publish patches for operator minor versions 0.140 (in stable)
+  - 4.13: publish patches for operator minor versions 0.113, 0.119, 0.127, 0.135, 0.140 (in stable)
+
+power-monitoring-operator
+  - 4.14, 4.15: publish patches for operator minor versions 0.4, 0.5 (in tech-preview)
+  - 4.16: publish patches for operator minor versions 0.5 (in tech-preview)
+
+ptp-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+quay-bridge-operator
+  - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
+
+quay-operator
+  - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
+
+recipe
+  - 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+redhat-oadp-operator
+  - 4.12: publish patches for operator minor versions 1.4 (in stable-1.4)
+
+rhbk-operator
+  - 4.13, 4.15: publish patches for operator minor versions 26.0 (in stable-v26, stable-v26.0), 26.2 (in stable-v26, stable-v26.2), 26.4 (in stable-v26, stable-v26.4)
+
+rhcl-operator
+  - 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+rhdh
+  - 4.12, 4.13: publish patches for operator minor versions 1.3 (in fast, fast-1.3), 1.4 (in fast, fast-1.4), 1.5 (in fast, fast-1.5), 1.6 (in fast, fast-1.6), 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
+  - 4.14: publish patches for operator minor versions 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
+  - 4.15: publish patches for operator minor versions 1.6 (in fast, fast-1.6), 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
+
+rhods-operator
+  - 4.12, 4.13: publish patches for operator minor versions 2.16 (in eus-2.16, eus-2.25, stable, stable-2.16, stable-2.19, stable-2.22, stable-2.25), 2.17, 2.18, 2.20, 2.23, 2.24 (in alpha, fast), 2.19 (in alpha, fast, stable, stable-2.19, stable-2.22, stable-2.25), 2.21 (in alpha, embedded, fast), 2.22 (in alpha, fast, stable, stable-2.22, stable-2.25), 2.25 (in alpha, eus-2.25, fast, stable, stable-2.25)
+  - 4.14: publish patches for operator minor versions 2.21 (in embedded), 2.22 (in stable, stable-2.22, stable-2.25), 2.24 (in alpha, fast), 2.25 (in alpha, eus-2.25, fast, stable, stable-2.25)
+  - 4.15: publish patches for operator minor versions 2.22 (in stable-2.22), 2.25 (in alpha, eus-2.25, fast, stable, stable-2.25)
+
+rhtas-operator
+  - 4.13: publish patches for operator minor versions 1.1 (in stable, stable-v1.1), 1.2 (in stable, stable-v1.2), 1.3 (in stable, stable-v1.3)
+  - 4.14: publish patches for operator minor versions 1.2 (in stable, stable-v1.2), 1.3 (in stable, stable-v1.3)
+  - 4.15: publish patches for operator minor versions 1.3 (in stable, stable-v1.3)
+
+rook-ceph-operator
+  - 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
+  - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+
+run-once-duration-override-operator
+  - 4.13, 4.14: publish patches for operator minor versions 1.1, 1.2 (in stable)
+  - 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable)
+
+sandboxed-containers-operator
+  - 4.12, 4.13, 4.14: publish patches for operator minor versions 1.7, 1.8, 1.9, 1.10, 1.11 (in stable)
+  - 4.15: publish patches for operator minor versions 1.10, 1.11 (in stable)
+  - 4.16: publish patches for operator minor versions 1.11 (in stable)
+
+secrets-store-csi-driver-operator
+  - 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+self-node-remediation
+  - 4.12, 4.13: publish patches for operator minor versions 0.10 (in 4.18-eus, stable), 0.11 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 0.11 (in stable)
+
+serverless-operator
+  - 4.12: publish patches for operator minor versions 1.33 (in stable-1.33), 1.34 (in stable, stable-1.34, stable-1.35, stable-1.36, stable-1.37), 1.35 (in stable, stable-1.35, stable-1.36, stable-1.37), 1.36 (in stable, stable-1.36, stable-1.37), 1.37 (in stable, stable-1.37)
+  - 4.13: publish patches for operator minor versions 1.35 (in stable, stable-1.35, stable-1.36, stable-1.37), 1.36 (in stable, stable-1.36, stable-1.37), 1.37 (in stable, stable-1.37)
+
+servicemeshoperator3
+  - 4.14, 4.15: publish patches for operator minor versions 3.1 (in stable, stable-3.1), 3.2 (in stable, stable-3.2)
+  - 4.16, 4.17: publish patches for operator minor versions 3.2 (in stable, stable-3.2)
+
+servicemeshoperator
+  - 4.12, 4.13: publish patches for operator minor versions 2.6 (in 1.0, stable)
+
+service-telemetry-operator
+  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 1.5 (in stable-1.5)
+
+smart-gateway-operator
+  - 4.14, 4.15: publish patches for operator minor versions 5.0 (in stable-1.5)
+
+smb-csi-driver-operator
+  - 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+sriov-network-operator
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+submariner
+  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 0.20 (in stable-0.20), 0.21 (in stable-0.21), 0.22 (in stable-0.22)
+
+tempo-product
+  - 4.13: publish patches for operator minor versions 0.14, 0.15, 0.16, 0.18, 0.19 (in stable)
+  - 4.15: publish patches for operator minor versions 0.19 (in stable)
+
+topology-aware-lifecycle-manager
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in 4.18, stable)
+
+trustee-operator
+  - 4.15: publish patches for operator minor versions 0.4, 1.0 (in stable)
+  - 4.16: publish patches for operator minor versions 1.0 (in stable)
+
+vertical-pod-autoscaler
+  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+
+volsync-product
+  - 4.12, 4.13: publish patches for operator minor versions 0.12 (in stable, stable-0.12), 0.13 (in stable, stable-0.13), 0.14 (in stable, stable-0.14)
+
+web-terminal
+  - 4.12: publish patches for operator minor versions 1.8, 1.9, 1.10, 1.11, 1.12, 1.13 (in fast)
+  - 4.13: publish patches for operator minor versions 1.9, 1.10, 1.11, 1.12, 1.13 (in fast)
+  - 4.14: publish patches for operator minor versions 1.10, 1.11, 1.12, 1.13 (in fast)
+  - 4.15: publish patches for operator minor versions 1.11, 1.12, 1.13 (in fast)
+  - 4.16: publish patches for operator minor versions 1.12, 1.13 (in fast)
+  - 4.17: publish patches for operator minor versions 1.13 (in fast)
+
+windows-machine-config-operator
+  - 4.17: publish patches for operator minor versions 10.18 (in stable)
+
