@@ -1,0 +1,39 @@
+3scale-operator	https://access.redhat.com/solutions/7138429
+apicast-operator	https://access.redhat.com/solutions/7138433
+aws-efs-csi-driver-operator	https://access.redhat.com/solutions/7138293
+cluster-kube-descheduler-operator	https://access.redhat.com/solutions/7138396
+cluster-logging	https://access.redhat.com/solutions/7138224
+clusterresourceoverride	https://access.redhat.com/solutions/7138414
+devspaces	https://access.redhat.com/solutions/7138371
+gcp-filestore-csi-driver-operator	https://access.redhat.com/solutions/7138311
+ingress-node-firewall	https://access.redhat.com/solutions/7138395
+jaeger-product	Out of Support
+kiali-ossm	https://access.redhat.com/solutions/7138322
+kubernetes-nmstate-operator	https://access.redhat.com/solutions/7138404
+kubevirt-hyperconverged	https://access.redhat.com/solutions/7138312
+lifecycle-agent	https://access.redhat.com/solutions/7138300
+lightspeed-operator	https://access.redhat.com/solutions/7138415
+loki-operator	https://access.redhat.com/solutions/7138224
+metallb-operator	https://access.redhat.com/solutions/7138208
+mtv-operator	https://access.redhat.com/solutions/7138260
+numaresources-operator	https://access.redhat.com/solutions/7138297
+ocs-operator	Only impacted TP on baremetal and AWS | Rolling Stream
+openshift-cert-manager-operator	https://access.redhat.com/solutions/7138306
+openshift-pipelines-operator-rh	https://access.redhat.com/solutions/7138381
+openshift-secondary-scheduler-operator	https://access.redhat.com/solutions/7138396
+power-monitoring-operator	Rolling Stream Operator | Tech Preview
+ptp-operator	https://access.redhat.com/solutions/7138235
+redhat-oadp-operator	https://access.redhat.com/solutions/7138407
+rhods-operator	https://access.redhat.com/solutions/7138416
+run-once-duration-override-operator	https://access.redhat.com/solutions/7138396
+secrets-store-csi-driver-operator	https://access.redhat.com/solutions/7138378
+service-telemetry-operator	https://access.redhat.com/solutions/7138302
+servicemeshoperator	https://access.redhat.com/solutions/7138392
+servicemeshoperator3	https://access.redhat.com/solutions/7138393
+smart-gateway-operator	https://access.redhat.com/solutions/7138302
+sriov-network-operator	https://access.redhat.com/solutions/7138209
+topology-aware-lifecycle-manager	https://access.redhat.com/solutions/7138301
+trustee-operator	Rolling Stream Operator | Tech Preview
+vertical-pod-autoscaler	https://access.redhat.com/solutions/7138413
+web-terminal	https://access.redhat.com/solutions/7138398
+windows-machine-config-operator	https://access.redhat.com/solutions/7138325
