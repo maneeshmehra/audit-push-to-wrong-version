@@ -16,8 +16,16 @@ lightspeed-operator	https://access.redhat.com/solutions/7138415
 loki-operator	https://access.redhat.com/solutions/7138224
 metallb-operator	https://access.redhat.com/solutions/7138208
 mtv-operator	https://access.redhat.com/solutions/7138260
+nfd	https://access.redhat.com/solutions/7138589
 numaresources-operator	https://access.redhat.com/solutions/7138297
-ocs-operator	Only impacted TP on baremetal and AWS | Rolling Stream
+ocs-client-operator	https://access.redhat.com/solutions/7138647
+ocs-operator	https://access.redhat.com/solutions/7138647
+odf-csi-addons-operator	https://access.redhat.com/solutions/7138647
+odf-multicluster-orchestrator	https://access.redhat.com/solutions/7138647
+odf-operator	https://access.redhat.com/solutions/7138647
+odf-prometheus-operator	https://access.redhat.com/solutions/7138647
+odr-cluster-operator	https://access.redhat.com/solutions/7138647
+odr-hub-operator	https://access.redhat.com/solutions/7138647
 openshift-cert-manager-operator	https://access.redhat.com/solutions/7138306
 openshift-pipelines-operator-rh	https://access.redhat.com/solutions/7138381
 openshift-secondary-scheduler-operator	https://access.redhat.com/solutions/7138396
@@ -26,6 +34,7 @@ ptp-operator	https://access.redhat.com/solutions/7138235
 redhat-oadp-operator	https://access.redhat.com/solutions/7138407
 rhods-operator	https://access.redhat.com/solutions/7138416
 run-once-duration-override-operator	https://access.redhat.com/solutions/7138396
+sandboxed-containers-operator	Only impacted TP on baremetal and AWS | Rolling Stream
 secrets-store-csi-driver-operator	https://access.redhat.com/solutions/7138378
 service-telemetry-operator	https://access.redhat.com/solutions/7138302
 servicemeshoperator	https://access.redhat.com/solutions/7138392
