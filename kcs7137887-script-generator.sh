@@ -5,8 +5,8 @@ set -o errexit
 set -o pipefail
 
 
-ORIGINAL_FILE="${1:-bad-csvs-by-ocp-version.json}"
-CURRENT_FILE="${2:-all-update-edges-2026-02-24.txt}"
+ORIGINAL_FILE="${1:-archive/original/bad-csvs-by-ocp-version.json}"
+CURRENT_FILE="${2:-all-update-edges-latest.txt}"
 
 # I am not sure if there is an API for listing rolling-stream operator names, but this join seems close:
 #
