@@ -98,12 +98,12 @@ kubernetes-nmstate-operator
   - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
 
 kubevirt-hyperconverged
-  - 4.12: publish patches for operator minor versions 4.13, 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
-  - 4.13: publish patches for operator minor versions 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
-  - 4.14: publish patches for operator minor versions 4.15, 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
-  - 4.15: publish patches for operator minor versions 4.16, 4.17 (in stable), 4.18 (in stable, candidate)
-  - 4.16: publish patches for operator minor versions 4.17 (in stable), 4.18 (in stable, candidate)
-  - 4.17: publish patches for operator minor versions 4.18 (in stable, candidate)
+  - 4.12: publish patches for operator minor versions 4.13, 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in candidate, stable)
+  - 4.13: publish patches for operator minor versions 4.14, 4.15, 4.16, 4.17 (in stable), 4.18 (in candidate, stable)
+  - 4.14: publish patches for operator minor versions 4.15, 4.16, 4.17 (in stable), 4.18 (in candidate, stable)
+  - 4.15: publish patches for operator minor versions 4.16, 4.17 (in stable), 4.18 (in candidate, stable)
+  - 4.16: publish patches for operator minor versions 4.17 (in stable), 4.18 (in candidate, stable)
+  - 4.17: publish patches for operator minor versions 4.18 (in candidate, stable)
 
 lifecycle-agent
   - 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in 4.18, stable)

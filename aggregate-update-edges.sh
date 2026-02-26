@@ -19,6 +19,22 @@ fi
 
 awk '
 # Version sort: split on ", ", compare major.minor numerically, rejoin
+# Alphabetical sort for comma-separated strings (e.g. channel names)
+function asort_csv(str,    arr, n, i, j, tmp) {
+    n = split(str, arr, ", ")
+    for (i = 2; i <= n; i++) {
+        tmp = arr[i]
+        j = i - 1
+        while (j >= 1 && arr[j] > tmp) {
+            arr[j+1] = arr[j]
+            j--
+        }
+        arr[j+1] = tmp
+    }
+    str = arr[1]
+    for (i = 2; i <= n; i++) str = str ", " arr[i]
+    return str
+}
 function vsort(str,    arr, n, i, j, tmp, ai, aj, avi, avj) {
     n = split(str, arr, ", ")
     for (i = 2; i <= n; i++) {
@@ -100,7 +116,7 @@ END {
         delete seen_grp
         for (j = 1; j <= nm; j++) {
             m = marr[j]
-            ch = minor_chans[key, m]
+            ch = asort_csv(minor_chans[key, m])
             if (!(ch in seen_grp)) {
                 seen_grp[ch] = ++ngrp
                 grp_chans[ngrp] = ch

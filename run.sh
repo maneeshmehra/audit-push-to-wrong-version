@@ -6,6 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
 DATE=$(date +%Y-%m-%d)
+export LC_ALL=C
 
 echo "=== Running prepare.sh ==="
 ./prepare.sh
