@@ -6,7 +6,7 @@ set -o pipefail
 
 # Change-log:
 # * 2026-02-13 v1 (sha256 5d2da3dad20aa839a6c261c78af5b09d89364190b55da67a8ebdf75d26db33aa)
-# * 2026-02-25 v2 (sha256 in KCS; drop this line and hash to get da10a117da87e2e6106ab9f933bb938763ec3035efc5b49bcacfe66290ec284b)
+# * 2026-02-27 v2 (sha256 in KCS; drop this line and hash to get 89cf48e975bca7993985f528c34d95465f80d5a300c013c0ce68749d63237a1c)
 #   * aws-efs-csi-driver-operator.v4.18.0-202602040643 added to 4.14 concerns (v1 had accidentally dropped it for testing)
 #   * some rolling-stream operators (but not yet all) have committed to supporting identical catalogs on all supported OCP releases, https://access.redhat.com/support/policy/updates/openshift_operators#rolling-stream
 #   * some operators (e.g. openshift-builds-operator) have already shipped sufficient versions into older catalogs to make the incident-induced skew a non-issue for those operators.
@@ -5829,7 +5829,6 @@ openshift-pipelines-operator-rh.v1.20.0
 openshift-pipelines-operator-rh.v1.20.1
 openshift-pipelines-operator-rh.v1.20.2
 openshift-pipelines-operator-rh.v1.21.0
-opentelemetry-operator.v0.140.0-2
 ptp-operator.v4.18.0-202501230001
 ptp-operator.v4.18.0-202502250302
 ptp-operator.v4.18.0-202503121135
@@ -6793,15 +6792,6 @@ openshift-pipelines-operator-rh.v1.20.0
 openshift-pipelines-operator-rh.v1.20.1
 openshift-pipelines-operator-rh.v1.20.2
 openshift-pipelines-operator-rh.v1.21.0
-opentelemetry-operator.v0.113.0-1
-opentelemetry-operator.v0.113.0-2
-opentelemetry-operator.v0.119.0-1
-opentelemetry-operator.v0.119.0-2
-opentelemetry-operator.v0.127.0-1
-opentelemetry-operator.v0.127.0-2
-opentelemetry-operator.v0.135.0-1
-opentelemetry-operator.v0.140.0-1
-opentelemetry-operator.v0.140.0-2
 ptp-operator.v4.18.0-202501230001
 ptp-operator.v4.18.0-202502250302
 ptp-operator.v4.18.0-202503121135
@@ -8380,8 +8370,6 @@ odr-hub-operator.v4.18.9-rhodf
 openshift-pipelines-operator-rh.v1.19.4
 openshift-pipelines-operator-rh.v1.20.2
 openshift-pipelines-operator-rh.v1.21.0
-opentelemetry-operator.v0.140.0-1
-opentelemetry-operator.v0.140.0-2
 power-monitoring-operator.v0.4.0
 power-monitoring-operator.v0.5.0
 ptp-operator.v4.18.0-202501230001
@@ -8502,9 +8490,6 @@ submariner.v0.20.2
 submariner.v0.21.0
 submariner.v0.21.2
 submariner.v0.22.0
-tempo-operator.v0.19.0-1
-tempo-operator.v0.19.0-2
-tempo-operator.v0.19.0-3
 topology-aware-lifecycle-manager.v4.18.0
 topology-aware-lifecycle-manager.v4.18.1
 topology-aware-lifecycle-manager.v4.18.2
@@ -9872,7 +9857,7 @@ WARNINGS="$(oc get -o jsonpath='{range .items[*].status.components.refs[?(.kind 
 NO_LONGER_CONCERNING="$(printf '%s' "${WARNINGS}" | sort | comm -2 -3 - <(printf '%s' "${CURRENTLY_CONCERNING}" | sort))"
 if test -n "${NO_LONGER_CONCERNING}"
 then
-  printf 'The v1 script was concerned about these operators, but they have since been added to %s catalogs, although you might need to change the channel:\n%s\n\n' "${MAJOR_MINOR}" "${NO_LONGER_CONCERNING}"
+  printf 'The v1 script was concerned about these operators, but they have since been added to %s catalogs:\n%s\n\n' "${MAJOR_MINOR}" "${NO_LONGER_CONCERNING}"
   WARNINGS="$(printf '%s' "${WARNINGS}" | sort | join - <(printf '%s' "${CURRENTLY_CONCERNING}" | sort))"
 fi
 
