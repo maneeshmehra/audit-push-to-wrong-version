@@ -4536,17 +4536,6 @@ submariner 4.15 submariner.v0.20.2 "stable-0.20" "" false
 submariner 4.15 submariner.v0.21.0 "stable-0.21" "" false
 submariner 4.15 submariner.v0.21.2 "stable-0.21" "" false
 submariner 4.15 submariner.v0.22.0 "stable-0.22" "" false
-tempo-product 4.13 tempo-operator.v0.14.1-1 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.14.1-2 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.15.3-1 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.15.4-1 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.16.0-1 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.16.0-2 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.18.0-1 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.18.0-2 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.19.0-1 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.19.0-2 "stable" "" false
-tempo-product 4.13 tempo-operator.v0.19.0-3 "stable" "" false
 topology-aware-lifecycle-manager 4.12 topology-aware-lifecycle-manager.v4.18.0 "4.18,stable" "" false
 topology-aware-lifecycle-manager 4.12 topology-aware-lifecycle-manager.v4.18.1 "4.18,stable" "" false
 topology-aware-lifecycle-manager 4.12 topology-aware-lifecycle-manager.v4.18.2 "4.18,stable" "" false
