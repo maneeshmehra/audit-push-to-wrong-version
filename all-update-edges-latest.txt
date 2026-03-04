@@ -2125,7 +2125,6 @@ multicluster-global-hub-operator-rh 4.14 multicluster-global-hub-operator-rh.v1.
 multicluster-global-hub-operator-rh 4.14 multicluster-global-hub-operator-rh.v1.6.1 "release-1.6" "" false
 multicluster-global-hub-operator-rh 4.15 multicluster-global-hub-operator-rh.v1.6.0 "release-1.6" "" false
 multicluster-global-hub-operator-rh 4.15 multicluster-global-hub-operator-rh.v1.6.1 "release-1.6" "" false
-nbde-tang-server 4.17 nbde-tang-server.v1.1.1 "stable" "" false
 nfd 4.12 nfd.4.18.0-202502101733 "stable" "" false
 nfd 4.12 nfd.4.18.0-202502250302 "stable" "" false
 nfd 4.12 nfd.4.18.0-202503121135 "stable" "" false

@@ -157,9 +157,6 @@ multicluster-global-hub-operator-rh
   - 4.14: publish patches for operator minor versions 1.5 (in release-1.5), 1.6 (in release-1.6)
   - 4.15: publish patches for operator minor versions 1.6 (in release-1.6)
 
-nbde-tang-server
-  - 4.17: publish patches for operator minor versions 1.1 (in stable)
-
 nfd
   - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
 
