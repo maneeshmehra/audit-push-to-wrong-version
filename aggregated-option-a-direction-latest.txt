@@ -15,7 +15,7 @@ apicast-operator
 
 authorino-operator
   - 4.12, 4.13: publish patches for operator minor versions 1.1 (in stable, tech-preview-v1), 1.2 (in stable)
-  - 4.14, 4.15, 4.16: publish patches for operator minor versions 1.2 (in stable)
+  - 4.14, 4.15: publish patches for operator minor versions 1.2 (in stable)
 
 aws-efs-csi-driver-operator
   - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
@@ -56,9 +56,6 @@ devspaces
 devworkspace-operator
   - 4.12, 4.13: publish patches for operator minor versions 0.33, 0.34, 0.35, 0.36, 0.37, 0.38 (in fast)
   - 4.14, 4.15: publish patches for operator minor versions 0.38 (in fast)
-
-dns-operator
-  - 4.16: publish patches for operator minor versions 1.2 (in stable)
 
 dpu-network-operator
   - 4.12: publish patches for operator minor versions 4.13 (in stable)
@@ -107,9 +104,6 @@ lifecycle-agent
 
 lightspeed-operator
   - 4.15: publish patches for operator minor versions 1.0 (in alpha, stable)
-
-limitador-operator
-  - 4.16: publish patches for operator minor versions 1.2 (in stable)
 
 local-storage-operator
   - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
@@ -243,9 +237,6 @@ redhat-oadp-operator
 rhbk-operator
   - 4.13, 4.15: publish patches for operator minor versions 26.0 (in stable-v26, stable-v26.0), 26.2 (in stable-v26, stable-v26.2), 26.4 (in stable-v26, stable-v26.4)
 
-rhcl-operator
-  - 4.16: publish patches for operator minor versions 1.2 (in stable)
-
 rhdh
   - 4.12, 4.13: publish patches for operator minor versions 1.3 (in fast, fast-1.3), 1.4 (in fast, fast-1.4), 1.5 (in fast, fast-1.5), 1.6 (in fast, fast-1.6), 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
   - 4.14: publish patches for operator minor versions 1.7 (in fast, fast-1.7), 1.8 (in fast, fast-1.8)
@@ -280,10 +271,6 @@ secrets-store-csi-driver-operator
 self-node-remediation
   - 4.12, 4.13: publish patches for operator minor versions 0.10 (in 4.18-eus, stable), 0.11 (in stable)
   - 4.14, 4.15: publish patches for operator minor versions 0.11 (in stable)
-
-serverless-operator
-  - 4.12: publish patches for operator minor versions 1.33 (in stable-1.33), 1.34 (in stable, stable-1.34, stable-1.35, stable-1.36, stable-1.37), 1.35 (in stable, stable-1.35, stable-1.36, stable-1.37), 1.36 (in stable, stable-1.36, stable-1.37), 1.37 (in stable, stable-1.37)
-  - 4.13: publish patches for operator minor versions 1.35 (in stable, stable-1.35, stable-1.36, stable-1.37), 1.36 (in stable, stable-1.36, stable-1.37), 1.37 (in stable, stable-1.37)
 
 service-telemetry-operator
   - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 1.5 (in stable-1.5)
