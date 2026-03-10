@@ -106,7 +106,7 @@ lightspeed-operator
   - 4.15: publish patches for operator minor versions 1.0 (in alpha, stable)
 
 local-storage-operator
-  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+  - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.18 (in stable)
 
 logic-operator-rhel8
   - 4.12: publish patches for operator minor versions 1.36 (in alpha)
