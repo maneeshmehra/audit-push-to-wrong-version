@@ -46,9 +46,6 @@ clusterresourceoverride
 container-security-operator
   - 4.17: publish patches for operator minor versions 3.5 (in quay-v3.5)
 
-deployment-validation-operator
-  - 4.12, 4.13, 4.14, 4.15: publish patches for operator minor versions 0.7 (in alpha)
-
 devspaces
   - 4.12, 4.13: publish patches for operator minor versions 3.18, 3.19, 3.20, 3.21, 3.22, 3.23, 3.24, 3.25 (in stable)
   - 4.14, 4.15: publish patches for operator minor versions 3.25 (in stable)
@@ -196,9 +193,6 @@ odr-cluster-operator
 odr-hub-operator
   - 4.12, 4.13, 4.14, 4.15, 4.16: publish patches for operator minor versions 4.17 (in stable-4.17), 4.18 (in stable-4.18)
   - 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
-
-openshift-builds-operator
-  - 4.14: publish patches for operator minor versions 1.4 (in builds-1.4, latest)
 
 openshift-cert-manager-operator
   - 4.14, 4.15: publish patches for operator minor versions 1.17 (in stable-v1, stable-v1.17, stable-v1.18), 1.18 (in stable-v1, stable-v1.18)
