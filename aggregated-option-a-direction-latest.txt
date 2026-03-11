@@ -102,9 +102,6 @@ lifecycle-agent
 lightspeed-operator
   - 4.15: publish patches for operator minor versions 1.0 (in alpha, stable)
 
-local-storage-operator
-  - 4.13, 4.15, 4.16: publish patches for operator minor versions 4.18 (in stable)
-
 logic-operator-rhel8
   - 4.12: publish patches for operator minor versions 1.36 (in alpha)
 
