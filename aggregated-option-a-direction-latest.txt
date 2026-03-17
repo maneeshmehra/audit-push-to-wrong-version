@@ -125,9 +125,6 @@ mcg-operator
 metallb-operator
   - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
 
-mtc-operator
-  - 4.12, 4.13: publish patches for operator minor versions 1.8 (in release-v1.8)
-
 mtv-operator
   - 4.12, 4.13: publish patches for operator minor versions 2.7 (in release-v2.7), 2.8 (in release-v2.8), 2.9 (in release-v2.9), 2.10 (in release-v2.10)
   - 4.14, 4.15: publish patches for operator minor versions 2.8 (in release-v2.8), 2.9 (in release-v2.9), 2.10 (in release-v2.10)

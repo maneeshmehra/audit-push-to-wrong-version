@@ -1793,12 +1793,6 @@ metallb-operator 4.17 metallb-operator.v4.18.0-202511181540 "stable" "" false
 metallb-operator 4.17 metallb-operator.v4.18.0-202511261113 "stable" "" false
 metallb-operator 4.17 metallb-operator.v4.18.0-202601071645 "stable" "" false
 metallb-operator 4.17 metallb-operator.v4.18.0-202601201947 "stable" "" false
-mtc-operator 4.12 mtc-operator.v1.8.10 "release-v1.8" "" false
-mtc-operator 4.12 mtc-operator.v1.8.11 "release-v1.8" "" false
-mtc-operator 4.12 mtc-operator.v1.8.9 "release-v1.8" "" false
-mtc-operator 4.13 mtc-operator.v1.8.10 "release-v1.8" "" false
-mtc-operator 4.13 mtc-operator.v1.8.11 "release-v1.8" "" false
-mtc-operator 4.13 mtc-operator.v1.8.9 "release-v1.8" "" false
 mtv-operator 4.12 mtv-operator.v2.10.0 "release-v2.10" "" false
 mtv-operator 4.12 mtv-operator.v2.10.1 "release-v2.10" "" false
 mtv-operator 4.12 mtv-operator.v2.10.2 "release-v2.10" "" false
