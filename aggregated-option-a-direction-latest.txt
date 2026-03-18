@@ -274,7 +274,7 @@ smart-gateway-operator
   - 4.14, 4.15: publish patches for operator minor versions 5.0 (in stable-1.5)
 
 smb-csi-driver-operator
-  - 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
+  - 4.16: publish patches for operator minor versions 4.18 (in stable)
 
 sriov-network-operator
   - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable)
