@@ -1448,7 +1448,6 @@ lvms-operator 4.12 lvms-operator.v4.18.4 "stable-4.18" "" false
 lvms-operator 4.13 lvms-operator.v4.18.4 "stable-4.18" "" false
 lvms-operator 4.14 lvms-operator.v4.18.4 "stable-4.18" "" false
 lvms-operator 4.15 lvms-operator.v4.18.4 "stable-4.18" "" false
-lvms-operator 4.16 lvms-operator.v4.18.4 "stable-4.18" "" false
 lvms-operator 4.17 lvms-operator.v4.18.4 "stable-4.18" "" false
 machine-deletion-remediation 4.12 machine-deletion-remediation.v0.4.0 "4.18-eus,stable" "ITN-2026-00040-stable" true
 machine-deletion-remediation 4.12 machine-deletion-remediation.v0.4.1 "4.18-eus,stable" "ITN-2026-00040-stable" true

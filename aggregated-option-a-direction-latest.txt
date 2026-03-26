@@ -112,7 +112,7 @@ loki-operator
   - 4.17: publish patches for operator minor versions 6.4 (in stable-6.4)
 
 lvms-operator
-  - 4.12, 4.13, 4.14, 4.15, 4.16, 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
+  - 4.12, 4.13, 4.14, 4.15, 4.17: publish patches for operator minor versions 4.18 (in stable-4.18)
 
 machine-deletion-remediation
   - 4.12, 4.13: publish patches for operator minor versions 0.4 (in 4.18-eus, stable), 0.5 (in stable)
